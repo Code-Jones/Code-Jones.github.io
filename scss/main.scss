@@ -1,0 +1,84 @@
+@import "libs/var";
+@import "libs/animations";
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font: 600 1rem/1.3 Consolas, Andale Mono, monospace;
+  font-size: 1.2rem;
+}
+
+header {
+  background: rgba(148,166,182,0);
+  animation: textShadow 6s infinite;
+}
+
+body {
+  background: url(../assets/images/greenscreen.png) no-repeat fixed center center;
+  overflow: hidden;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  color: greenyellow;
+  z-index: 0;
+}
+
+.centered {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+
+.middle {
+  margin: 20% auto;
+  height: 50%;
+  animation: textShadow 6s infinite;
+}
+
+.screen {
+  background: repeating-linear-gradient(
+                  to bottom,
+                  rgba(0, 0, 0, 0.2),
+                  rgba(0, 0, 0, 0.2) 4px,
+                  rgba(0, 0, 0, 0.3) 4px,
+                  rgba(0, 0, 0, 0.3) 4px,
+                  rgba(0, 0, 0, 0.3) 8px
+  );
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-size: 200% 200%;
+  animation: waves 20s linear infinite;
+  animation-direction: reverse;
+}
+
+.flicker::before {
+  content: "flicker";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+                  rgba(18, 16, 16, 0) 50%,
+                  rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+                  90deg,
+                  rgba(57, 255, 55, 0.11),
+                  rgba(0, 255, 0, 0.02),
+                  rgba(0, 0, 255, 0.06)
+  );
+  z-index: 2;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  animation: flicker 3.5s infinite;
+}
+
+
+
+
+
+
