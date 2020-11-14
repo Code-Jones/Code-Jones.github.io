@@ -25,17 +25,39 @@ body {
   z-index: 0;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  a, a:visited{
+    text-decoration: none;
+    color: greenyellow;
+  }
+  a:hover {
+    color: white;
+  }
+}
+
 .centered {
   width: 50%;
   text-align: center;
   margin: auto;
 }
 
+.middle_flex {
+
+}
 
 .middle {
   margin: 20% auto;
   height: 50%;
-  animation: textShadow 6s infinite;
+
 }
 
 .screen {
@@ -50,7 +72,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   background-size: 200% 200%;
   animation: waves 20s linear infinite;
   animation-direction: reverse;
@@ -71,10 +93,25 @@ body {
                   rgba(0, 255, 0, 0.02),
                   rgba(0, 0, 255, 0.06)
   );
-  z-index: 2;
+  z-index: -1;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
-  animation: flicker 3.5s infinite;
+  animation: flicker 2s infinite;
+}
+
+.type_effect {
+  display: inline-block;
+  color: limegreen;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: 1em solid; /* The cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  max-width: 50%;
+  animation:
+          typing 8s steps(60, end),
+          textShadow 6s infinite,
+          cursor .5s step-end infinite;
 }
 
 

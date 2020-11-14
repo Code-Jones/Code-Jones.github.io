@@ -20,81 +20,97 @@
 }
 @keyframes flicker {
   0% {
-    opacity: 0.27861;
+    opacity: 0.3;
   }
   20% {
-    opacity: 0.18128;
+    opacity: 0.15;
   }
   40% {
-    opacity: 0.26559;
+    opacity: 0.4;
   }
   45% {
-    opacity: 0.84693;
+    opacity: 0.9;
   }
   50% {
-    opacity: 0.96019;
+    opacity: 0.99;
   }
   70% {
-    opacity: 0.53455;
+    opacity: 0.5;
   }
   75% {
-    opacity: 0.37288;
+    opacity: 0.35;
   }
   80% {
-    opacity: 0.71428;
+    opacity: 0.9;
   }
   85% {
-    opacity: 0.70419;
+    opacity: 0.6;
   }
   90% {
-    opacity: 0.7003;
+    opacity: 0.7;
   }
   95% {
-    opacity: 0.36108;
+    opacity: 0.35;
   }
   100% {
-    opacity: 0.24387;
+    opacity: 0.2;
   }
 }
 @keyframes textShadow {
   0% {
-    text-shadow: 0.4389924193px 0 1px rgba(0, 30, 255, 0.5), -0.4389924193px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 0.4px 0 1px rgba(0, 30, 255, 0.5), -0.4px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   20% {
-    text-shadow: 3.47940379px 0 1px rgba(0, 30, 255, 0.5), -3.47940379px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 3.5px 0 1px rgba(0, 30, 255, 0.5), -3.5px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   25% {
-    text-shadow: 1.6125630401px 0 1px rgba(0, 30, 255, 0.5), -1.6125630401px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 1.6px 0 1px rgba(0, 30, 255, 0.5), -1.6px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   45% {
-    text-shadow: 2.2310569634px 0 1px rgba(0, 30, 255, 0.5), -2.2310569634px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 2.2px 0 1px rgba(0, 30, 255, 0.5), -2.2px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   50% {
-    text-shadow: 0.0808429042px 0 1px rgba(0, 30, 255, 0.5), -0.0808429042px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 0.1px 0 1px rgba(0, 30, 255, 0.5), -0.1px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   55% {
-    text-shadow: 2.3758461067px 0 1px rgba(0, 30, 255, 0.5), -2.3758461067px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 2.4px 0 1px rgba(0, 30, 255, 0.5), -2.4px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   60% {
-    text-shadow: 2.2021930511px 0 1px rgba(0, 30, 255, 0.5), -2.2021930511px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 2.2px 0 1px rgba(0, 30, 255, 0.5), -2.2px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   65% {
-    text-shadow: 2.8638780615px 0 1px rgba(0, 30, 255, 0.5), -2.8638780615px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 2.8px 0 1px rgba(0, 30, 255, 0.5), -2.8px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   80% {
-    text-shadow: 0.0833037308px 0 1px rgba(0, 30, 255, 0.5), -0.0833037308px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 0.1px 0 1px rgba(0, 30, 255, 0.5), -0.1px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   85% {
-    text-shadow: 0.0976982726px 0 1px rgba(0, 30, 255, 0.5), -0.0976982726px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 0.1px 0 1px rgba(0, 30, 255, 0.5), -0.1px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   90% {
-    text-shadow: 3.4433397615px 0 1px rgba(0, 30, 255, 0.5), -3.4433397615px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 3.5px 0 1px rgba(0, 30, 255, 0.5), -3.5px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   95% {
-    text-shadow: 2.1841838853px 0 1px rgba(0, 30, 255, 0.5), -2.1841838853px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 2.2px 0 1px rgba(0, 30, 255, 0.5), -2.2px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
   }
   100% {
-    text-shadow: 2.6208764474px 0 1px rgba(0, 30, 255, 0.5), -2.6208764474px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+    text-shadow: 2.5px 0 1px rgba(0, 30, 255, 0.5), -2.5px 0 1px rgba(255, 0, 80, 0.3), 0 0 3px;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes cursor {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: green;
   }
 }
 * {
@@ -121,6 +137,25 @@ body {
   z-index: 0;
 }
 
+footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer a, footer a:visited {
+  text-decoration: none;
+  color: greenyellow;
+}
+footer a:hover {
+  color: white;
+}
+
 .centered {
   width: 50%;
   text-align: center;
@@ -130,7 +165,6 @@ body {
 .middle {
   margin: 20% auto;
   height: 50%;
-  animation: textShadow 6s infinite;
 }
 
 .screen {
@@ -138,7 +172,7 @@ body {
   position: fixed;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  z-index: -1;
   background-size: 200% 200%;
   animation: waves 20s linear infinite;
   animation-direction: reverse;
@@ -151,10 +185,26 @@ body {
   width: 100%;
   height: 100%;
   background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(57, 255, 55, 0.11), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
-  z-index: 2;
+  z-index: -1;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
-  animation: flicker 3.5s infinite;
+  animation: flicker 2s infinite;
+}
+
+.type_effect {
+  display: inline-block;
+  color: limegreen;
+  font-family: monospace;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 1em solid;
+  /* The cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  max-width: 50%;
+  animation: typing 8s steps(60, end), textShadow 6s infinite, cursor 0.5s step-end infinite;
 }
 
 /*# sourceMappingURL=main.css.map */
