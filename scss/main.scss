@@ -45,16 +45,19 @@ footer {
   }
 }
 
-.centered {
+.centered-h {
   width: 50%;
   text-align: center;
   margin: auto;
 }
 
-.middle {
-  margin: 20% auto;
-  height: 50%;
-
+.centered-2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .screen {
@@ -96,10 +99,6 @@ footer {
 }
 
 .opening-text {
-
-  margin: 20% auto;
-  height: 50%;
-  width: 50%;
   font-size: 1.2em;
   p {
     border-right: 1.2em solid green;
@@ -107,79 +106,16 @@ footer {
     overflow: hidden;
     width: 100%;
     opacity: 0;
-    //-webkit-animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
-    //animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
-    //-webkit-animation-fill-mode: forwards;
-    //animation-fill-mode: forwards;
   }
 }
+
 .opening-text p.active {
   display: block;
   width: 100%;
-  -webkit-animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
-  animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
+  -webkit-animation: type 2s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
+  animation: type 2s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-
-//.opening-text p:nth-of-type(1) {
-//  width: 100%;
-//  animation: timed-disappear 3s forwards, blink 1s step-end infinite alternate, textShadow 6s infinite;
-//  -webkit-animation: timed-disappear 3s forwards, blink 1s step-end infinite alternate, textShadow 6s infinite;
-//  -webkit-animation-delay: .5s;
-//  animation-delay: .5s;
-//}
-//
-//.opening-text p:nth-of-type(2) {
-//  width: 100%;
-//  -webkit-animation-delay: 5s;
-//  animation-delay: 5s;
-//}
-//
-//.opening-text p:nth-of-type(3) {
-//  width: 100%;
-//  -webkit-animation-delay: 6s;
-//  animation-delay: 6s;
-//}
-//
-//.opening-text p:nth-of-type(4) {
-//  width: 100%;
-//  -webkit-animation-delay: 7s;
-//  animation-delay: 7s;
-//}
-//
-//.opening-text p:nth-of-type(5) {
-//  width: 100%;
-//  -webkit-animation-delay: 8s;
-//  animation-delay: 8s;
-//}
-//
-//.opening-text p:nth-of-type(6) {
-//  width: 100%;
-//  -webkit-animation-delay: 9s;
-//  animation-delay: 9s;
-//}
-
-.typed {
-  position: relative;
-  margin-left: 5%;
-  animation: textShadow 6s infinite;
-  word-break-wrap: none;
-}
-
-.cursor {
-  position: relative;
-  margin-left: 5%;
-
-}
-
-.cursor::after {
-  content: "";
-  margin-left: 0.5em;
-  width: 1px;
-  height: 5%;
-  border-right: 1em solid green;
-  animation: cursor .8s infinite;
 }
 
 

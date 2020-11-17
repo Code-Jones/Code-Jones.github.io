@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/libs/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/libs/_animations.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
@@ -27,7 +26,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1jW5JMHToqpH4nfqX3Yn3z3DZWl" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -51,11 +52,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Work\Portfolio\assets\sounds" />
       <recent name="C:\Work\Portfolio\assets" />
       <recent name="C:\Work\Portfolio\scss\libs" />
       <recent name="C:\Work\Portfolio\css" />
       <recent name="C:\Work\Portfolio\scss" />
-      <recent name="C:\Work\Portfolio" />
     </key>
   </component>
   <component name="RunManager">
@@ -94,7 +95,8 @@
       <workItem from="1605390682553" duration="52000" />
       <workItem from="1605390932520" duration="5706000" />
       <workItem from="1605409424130" duration="438000" />
-      <workItem from="1605490015034" duration="29370000" />
+      <workItem from="1605490015034" duration="30023000" />
+      <workItem from="1605585763234" duration="9044000" />
     </task>
     <servers />
   </component>

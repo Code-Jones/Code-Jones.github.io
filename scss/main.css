@@ -207,15 +207,19 @@ footer a:hover {
   color: white;
 }
 
-.centered {
+.centered-h {
   width: 50%;
   text-align: center;
   margin: auto;
 }
 
-.middle {
-  margin: 20% auto;
-  height: 50%;
+.centered-2 {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 .screen {
@@ -242,9 +246,6 @@ footer a:hover {
 }
 
 .opening-text {
-  margin: 20% auto;
-  height: 50%;
-  width: 50%;
   font-size: 1.2em;
 }
 .opening-text p {
@@ -258,31 +259,10 @@ footer a:hover {
 .opening-text p.active {
   display: block;
   width: 100%;
-  -webkit-animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
-  animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
+  -webkit-animation: type 2s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
+  animation: type 2s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-
-.typed {
-  position: relative;
-  margin-left: 5%;
-  animation: textShadow 6s infinite;
-  word-break-wrap: none;
-}
-
-.cursor {
-  position: relative;
-  margin-left: 5%;
-}
-
-.cursor::after {
-  content: "";
-  margin-left: 0.5em;
-  width: 1px;
-  height: 5%;
-  border-right: 1em solid green;
-  animation: cursor 0.8s infinite;
 }
 
 /*# sourceMappingURL=main.css.map */

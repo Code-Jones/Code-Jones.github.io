@@ -9,16 +9,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
-<header class="header centered" id="header">
+<header class="header centered-h" id="header">
     <div>
-        <h2>This is the header for now</h2>
+        <h1>This is the header for now</h1>
     </div>
 </header>
 
 
 <section>
-    <div class="flicker screen" id="screen" onclick="start(); this.onclick=null;">
-        <div class="opening-text" id="opening">
+    <div id="click-to-start" onclick="start()"><p class="centered-2">click to start</p></div>
+    <div class="flicker screen" id="screen">
+        <div class="opening-text centered-2" id="opening">
             <p class="animated">SECURITY RESET...</p><br>
             <p class="animated">WELCOME TO ROBCO INDUSTRIES (TM) TERMLINK</p><br>
             <p class="animated">>SET TERMINAL/INQUIRE</p><br>
@@ -40,7 +41,6 @@
         <a href="hireMe.html">Hire Me</a> <!--        change this to a contact after-->
     </div>
 </footer>
-<audio id="sounds" controls="" style="display: none"></audio>
 <!-- Scripts -->
 <script src="js/main.js"></script>
 </body>
