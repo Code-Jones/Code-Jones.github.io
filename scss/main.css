@@ -151,6 +151,7 @@
     opacity: 1;
   }
   100% {
+    display: none;
     opacity: 0;
   }
 }
@@ -169,7 +170,7 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  font: 600 1rem/1.3 Consolas, Andale Mono, monospace;
+  font-family: "Share Tech Mono", monospace;
   font-size: 1.2rem;
 }
 
@@ -240,32 +241,27 @@ footer a:hover {
   animation: flicker 2s infinite;
 }
 
+.opening-text {
+  margin: 20% auto;
+  height: 50%;
+  width: 50%;
+  font-size: 1.2em;
+}
 .opening-text p {
-  border-right: 1em solid green;
-  font-family: "Courier", serif;
-  font-size: 1em;
+  border-right: 1.2em solid green;
   white-space: nowrap;
   overflow: hidden;
-  margin-left: 20%;
   width: 100%;
   opacity: 0;
-  -webkit-animation: type 2s steps(40, end), blink 0.5s step-end infinite alternate;
-  animation: type 2s steps(40, end), blink 0.5s step-end infinite alternate;
+}
+
+.opening-text p.active {
+  display: block;
+  width: 100%;
+  -webkit-animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
+  animation: type 5s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-}
-
-.opening-text p:nth-child(1) {
-  width: 15em;
-  animation: timed-disappear 4s forwards;
-}
-
-.opening-text p:nth-child(2) {
-  width: 100%;
-}
-
-.opening-text p:nth-child(3) {
-  width: 100%;
 }
 
 .typed {
