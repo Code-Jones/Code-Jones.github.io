@@ -7,7 +7,7 @@
   border: 0;
   vertical-align: baseline;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 header {
@@ -112,10 +112,47 @@ footer {
 .opening-text p.active {
   display: block;
   width: 100%;
-  -webkit-animation: type 2s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
-  animation: type 2s steps(100, end), blink 1s step-end infinite alternate, textShadow 6s infinite;
+  -webkit-animation: type 1.5s steps(100, end), blink .5s step-end infinite alternate, textShadow 6s infinite;
+  animation: type 1.5s steps(100, end), blink .5s step-end infinite alternate, textShadow 6s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+
+.gameScreen {
+  margin-left: 1em;
+  margin-top: 10%;
+  width: 70%;
+  height: fit-content;
+  display: grid;
+  grid-template-columns: 1fr 2fr .25fr 1fr 2fr;
+  grid-template-rows:  1em;
+
+  div {
+    margin: .25em;
+    width: fit-content;
+    height: fit-content;
+  }
+  :nth-child(2) {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+  :nth-child(4) {
+    display: inline-flex;
+    flex-wrap: wrap;
+  }
+}
+.immutable {
+
+
+}
+.piece {
+  overflow: visible;
+  animation: textShadow 6s infinite;
+  display: inline;
+  span:hover {
+    background-color: #9ffc0a;
+    color: black;
+  }
 }
 
 
