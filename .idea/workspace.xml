@@ -1,9 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/2669735-1582321138.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TO_DO" beforeDir="false" afterPath="$PROJECT_DIR$/TO_DO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
@@ -25,6 +43,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="c215d19f-a0f3-4041-ada2-55447ae61871" />
   <component name="ProjectId" id="1jW5JMHToqpH4nfqX3Yn3z3DZWl" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -36,9 +55,11 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -97,11 +118,31 @@
       <workItem from="1605409424130" duration="438000" />
       <workItem from="1605490015034" duration="30023000" />
       <workItem from="1605585763234" duration="30321000" />
+      <workItem from="1605716019598" duration="3565000" />
+      <workItem from="1605836159249" duration="709000" />
+      <workItem from="1605861812434" duration="322000" />
+      <workItem from="1606173430908" duration="110000" />
+      <workItem from="1606257851886" duration="601000" />
+      <workItem from="1606372938262" duration="495000" />
+      <workItem from="1606676663403" duration="630000" />
+      <workItem from="1606677910132" duration="4927000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="392" y="91" key="#Notifications" timestamp="1603915457185">
@@ -129,10 +170,11 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="467" y="196" width="723" height="668" key="EditFileWatcherDialog/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603915429630" />
-    <state x="579" y="188" key="FileChooserDialogImpl" timestamp="1603915410233">
-      <screen x="62" y="0" width="1474" height="864" />
+    <state x="580" y="188" key="FileChooserDialogImpl" timestamp="1606173467226">
+      <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="579" y="188" key="FileChooserDialogImpl/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603915410233" />
+    <state x="580" y="188" key="FileChooserDialogImpl/64.0.1472.864@64.0.1472.864" timestamp="1606173467226" />
     <state width="692" height="271" key="GridCell.Tab.0.bottom" timestamp="1605582338603">
       <screen x="64" y="0" width="1472" height="864" />
     </state>
@@ -198,20 +240,22 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="1920" y="0" width="1235" height="846" key="dock-window-1/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1604195692979" />
-    <state x="457" y="197" key="run.anything.popup" timestamp="1605497651307">
+    <state x="457" y="197" key="run.anything.popup" timestamp="1605717089671">
       <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="457" y="197" key="run.anything.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605497651307" />
+    <state x="457" y="197" key="run.anything.popup/64.0.1472.864@64.0.1472.864" timestamp="1605717089671" />
     <state x="422" y="91" key="scopes" timestamp="1603913112663">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="422" y="91" key="scopes/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603913112663" />
-    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1605564763687">
-      <screen x="64" y="0" width="1472" height="864" />
+    <state x="568" y="226" width="848" height="848" key="search.everywhere.popup" timestamp="1606681542494">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state x="462" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603920270155" />
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1603931559619" />
     <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605564763687" />
+    <state x="568" y="226" width="848" height="848" key="search.everywhere.popup/64.0.1856.1080@64.0.1856.1080" timestamp="1606681542494" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Portfolio$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1605389872354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
