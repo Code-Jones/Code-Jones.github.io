@@ -22,6 +22,7 @@ const gameTopLines = ["ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL", "ENTER PASSWORD
 let password = ""; // change this
 let gameWords = [];
 let gameDuds = [];
+let attempts = 4;
 let passwordLetters; // really shouldn't be a global variable
 
 function start() {
@@ -50,6 +51,24 @@ function start() {
 
 }
 
+function makeAttemptBoxes() {
+    let attemptBox = document.createElement('div');
+    attemptBox.id = "attemptBox";
+    attemptBox.classList.add('attemptBox');
+    for (let i = 0; i < attempts; i++) {
+        let attempt = document.createElement('span');
+        attempt.innerText = ' ';
+        attempt.classList.add('attempt');
+        attemptBox.appendChild(attempt);
+    }
+    animated[animated.length - 1].appendChild(attemptBox);
+    animated[animated.length - 1].style.display = "inline-flex";
+}
+
+function playPrintSoundEvent() {
+    printSound.play().then();
+}
+
 function openGameScene() {
     // top text being printed
     animated = [];
@@ -58,29 +77,26 @@ function openGameScene() {
     topText.classList.add('gameTopText');
     for (let i = 0; i < gameTopLines.length; i++) {
         let line = document.createElement('p');
+        if (i === 1) {
+            line.id = "warning bar";
+            line.addEventListener('animationstart' , () => {
+                playSound('./assets/sounds/censor.wav');
+            })
+        }
         line.innerText = gameTopLines[i];
         animated[i] = line;
         topText.appendChild(line);
     }
     // attempt boxes
-    let attemptBox = document.createElement('div');
-    attemptBox.id = "attemptBox";
-    attemptBox.classList.add('attemptBox');
-    for (let i = 0; i < 4; i++) {
-        let attempt = document.createElement('span');
-        attempt.innerText = ' ';
-        attempt.classList.add('attempt');
-        attemptBox.appendChild(attempt);
-    }
-    animated[animated.length - 1].appendChild(attemptBox);
-    animated[animated.length - 1].style.display = "inline-flex";
-
+    makeAttemptBoxes();
     // animations
     for (let i = 0; i < animated.length; i++) {
-        animated[i].addEventListener('animationstart', () => {
-            printSound.play().then(r => (console.log(r + " sounds played")));
-        });
+        animated[i].addEventListener('animationstart', playPrintSoundEvent);
+
         animated[i].addEventListener('animationend', () => {
+            animated[i].classList.remove('active');
+            animated[i].classList.add('afterActive');
+            animated[i].style.opacity = '1';
             animated[i + 1].classList.toggle('active');
             printSound.pause();
         });
@@ -215,8 +231,34 @@ function printToTerminal(str, correct) {
     }
 }
 
+function winGame() {
+    console.log("win ");
+}
+
+function gameOver() {
+    console.log("game over");
+}
+
+function removeAttempt() {
+    if (attempts === 2) { // because it subtracts afterwards
+        let num = document.getElementsByClassName('afterActive');
+        num.item(num.length - 2).innerText = "!!! WARNING: LOCKOUT IMMINENT !!!";
+        num.item(num.length - 2).classList.add('blinking');
+    }
+    if (attempts === 1) {
+        gameOver();
+    } else {
+        let num = document.getElementsByClassName('afterActive');
+        num.item(num.length - 1).innerText = (attempts - 1) + " ATTEMPT(S) LEFT : ";
+        makeAttemptBoxes();
+        let attemptList = document.getElementsByClassName('attempt');
+        attemptList.item(attemptList.length - 1).remove();
+        attempts--;
+    }
+}
+
 function checkInput(innerText, type) {
-    console.log(innerText + " " + type);
+    // checks input to see how it affects game and to print to terminal
     if (type === "dud" && !innerText.includes('.')) {
         let ran = Math.floor(Math.random() * gameWords.length);
         while (gameWords.item(ran) === password) { // messy but just trying to get it done at this point
@@ -224,18 +266,18 @@ function checkInput(innerText, type) {
         }
         gameWords[ran].innerText = '..........';
         printToTerminal(innerText);
-    } else if (type === "word" && !innerText.includes('.')){
+    } else if (type === "word" && !innerText.includes('.')) {
         if (innerText === password) {
             // win game
+            winGame();
             printToTerminal(innerText, 10);
         } else {
+            removeAttempt();
             let innerLetter = innerText.split("");
-            console.log(innerLetter);
             let correct = 0;
             for (let i = 0; i < innerLetter.length; i++) {
                 if (innerLetter[i] === passwordLetters[i]) {
                     correct++;
-                    console.log(innerLetter[i]);
                 }
             }
             printToTerminal(innerText, correct);
@@ -272,12 +314,6 @@ function replaceWithFiller(children, type) {
     children[randomIndex].childNodes[0].innerText = type === "word" ? words_10.pop() : duds.pop();
 }
 
-function clickExtra(span) {
-    printToTerminal(span.innerText);
-    playSound('./assets/sounds/incorrect.wav');
-}
-
-
 function makeGameNodes() {
     // makes the base nodes for the game
     const extra = ["{", "}", "[", "]", "'", ":", ";", "/", "?", ".", ",", "<", ">", "(", ")", "-", "_", "*", "&", "^", "%", "$", "#", "@", "!", "~", "`", "|", "\\", "="];
@@ -289,6 +325,10 @@ function makeGameNodes() {
         document.getElementById('input').innerText = span.innerText;
         clickSounds[Math.floor(Math.random() * clickSounds.length)].play();
     });
+    span.addEventListener('click', () => {
+        // printToTerminal(span.innerText);
+        playSound('./assets/sounds/incorrect.wav');
+    });
     // span.addEventListener('click', (function(passedInElement) {
     //     return function(e) {clickExtra(e, passedInElement); };
     // }) (this.span), false);
@@ -298,7 +338,6 @@ function makeGameNodes() {
     //     return function (e) {}
     // }) (this.span))
     // span.addEventListener('click', clickExtra);
-
 
 
     piece.appendChild(span);

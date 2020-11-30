@@ -259,7 +259,6 @@ footer a:hover {
   margin-top: 2vw;
 }
 .gameTopText p {
-  border-right: 1.8vw solid green;
   white-space: nowrap;
   overflow: hidden;
   width: 100%;
@@ -337,6 +336,17 @@ footer a:hover {
   height: 90%;
   display: flex;
   flex-direction: column;
+}
+
+.afterActive p {
+  border-right: rgba(148, 166, 182, 0);
+}
+
+.blinking {
+  -webkit-animation: blink 1s step-end infinite, textShadow 6s infinite;
+  animation: blink 1s step-end infinite, textShadow 6s infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 /*# sourceMappingURL=main.css.map */

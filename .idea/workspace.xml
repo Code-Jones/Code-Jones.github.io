@@ -21,7 +21,20 @@
   <component name="ChangeListManager">
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/FalloutDict.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/dictSize_9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +68,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/sounds" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -69,12 +82,15 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Work\Portfolio\assets\sounds" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Work\Portfolio" />
       <recent name="C:\Work\Portfolio\assets\sounds" />
       <recent name="C:\Work\Portfolio\assets" />
       <recent name="C:\Work\Portfolio\scss\libs" />
       <recent name="C:\Work\Portfolio\css" />
-      <recent name="C:\Work\Portfolio\scss" />
     </key>
   </component>
   <component name="RunManager">
@@ -125,7 +141,8 @@
       <workItem from="1606677910132" duration="23542000" />
       <workItem from="1606717230093" duration="127000" />
       <workItem from="1606717742943" duration="92000" />
-      <workItem from="1606718353908" duration="9026000" />
+      <workItem from="1606718353908" duration="9054000" />
+      <workItem from="1606753956929" duration="9717000" />
     </task>
     <servers />
   </component>
