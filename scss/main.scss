@@ -185,9 +185,11 @@ footer {
 .sideTermBox {
   margin: 0;
   position: relative;
+
   div {
     margin: 0;
     height: auto;
+    display: flex;
   }
 }
 
@@ -195,7 +197,7 @@ footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  display: flex;
+
 }
 .outputBox {
 

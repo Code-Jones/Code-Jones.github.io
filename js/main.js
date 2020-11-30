@@ -91,13 +91,12 @@ function openGameScene() {
         printSound.pause();
         setTimeout(function () {
             printGameBoard();
-        }, 2000);
+        }, 3400);
     });
 }
 
-
-
 function printGameBoard() {
+    // no fancy animations yet
     let gameScreen = document.createElement('div');
     gameScreen.classList.add('gameScreen');
     keysBox = document.createElement('div');
@@ -149,17 +148,8 @@ function makeSideTerminal() {
     return sideTerm;
 }
 
-function makeIndexLines() {
-    let line = document.createElement('div');
-    for (let i = 0; i < numLines; i++) {
-        let index = document.createElement('p');
-        index.innerText = makeIndex(newIndex);
-        line.append(index);
-    }
-    return line;
-}
-
 function replaceWithFiller(children, type) {
+    // replaces random indexes with words & duds
     shuffle(words_10);
     let randomIndex = Math.floor(Math.random() * children.length);
     while (taken.includes(randomIndex)) { // stop having two fillers right beside each other
@@ -188,6 +178,7 @@ function replaceWithFiller(children, type) {
 } // good for now but come back to when your are doing game logic
 
 function makeGameNodes() {
+    // makes the base nodes for the game
     const extra = ["{", "}", "[", "]", "'", ":", ";", "/", "?", ".", ",", "<", ">", "(", ")", "-", "_", "*", "&", "^", "%", "$", "#", "@", "!", "~", "`", "|", "\\", "="];
     let piece = document.createElement('p');
     piece.classList.add('piece');
@@ -201,18 +192,19 @@ function makeGameNodes() {
     return piece;
 }
 
-function shuffle(a) {
-    let j, x, i;
-    for (i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
+function makeIndexLines() {
+    //randomizes the last two characters while keeping the first the same
+    let line = document.createElement('div');
+    for (let i = 0; i < numLines; i++) {
+        let index = document.createElement('p');
+        index.innerText = makeIndex(newIndex);
+        line.append(index);
     }
-    return a;
+    return line;
 }
 
 function makeIndex(line) {
+    // this is what makes the indexes and randomizes them
     if (line === null) {
         let line = "0x" + Math.random().toString(36).substring(2, 3).toUpperCase() + Math.random().toString(36).substring(2, 3).toUpperCase();
         for (let i = 0; i < 2; i++) {
@@ -228,18 +220,32 @@ function makeIndex(line) {
     }
 }
 
-function playSound(src) {
-    let audio = new Audio(src);
-    audio.play();
-}
-
 function playBackgroundSounds() {
+    // This plays the background sounds that play throughout the game.
     let fan = new Audio("./assets/sounds/computer_fan.mp3");
     let hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
     fan.play();
     hardDrive.loop = true;
     hardDrive.load();
     hardDrive.play();
+}
+
+function playSound(src) {
+    // util function to play whichever sounds given
+    let audio = new Audio(src);
+    audio.play();
+}
+
+function shuffle(a) {
+    // just a shuffle method
+    let j, x, i;
+    for (i = a.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        x = a[i];
+        a[i] = a[j];
+        a[j] = x;
+    }
+    return a;
 }
 
 
