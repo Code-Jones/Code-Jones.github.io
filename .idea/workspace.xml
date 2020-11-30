@@ -22,9 +22,6 @@
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +64,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="liveEdit" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -124,7 +122,10 @@
       <workItem from="1606257851886" duration="601000" />
       <workItem from="1606372938262" duration="495000" />
       <workItem from="1606676663403" duration="630000" />
-      <workItem from="1606677910132" duration="23514000" />
+      <workItem from="1606677910132" duration="23542000" />
+      <workItem from="1606717230093" duration="127000" />
+      <workItem from="1606717742943" duration="92000" />
+      <workItem from="1606718353908" duration="9026000" />
     </task>
     <servers />
   </component>
@@ -239,22 +240,23 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="1920" y="0" width="1235" height="846" key="dock-window-1/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1604195692979" />
-    <state x="457" y="197" key="run.anything.popup" timestamp="1605717089671">
-      <screen x="64" y="0" width="1472" height="864" />
+    <state x="560" y="246" width="672" height="677" key="run.anything.popup" timestamp="1606719582161">
+      <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state x="457" y="197" key="run.anything.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605497651307" />
     <state x="457" y="197" key="run.anything.popup/64.0.1472.864@64.0.1472.864" timestamp="1605717089671" />
+    <state x="560" y="246" width="672" height="677" key="run.anything.popup/64.0.1856.1080@64.0.1856.1080" timestamp="1606719582161" />
     <state x="422" y="91" key="scopes" timestamp="1603913112663">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="422" y="91" key="scopes/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603913112663" />
-    <state x="568" y="226" width="848" height="848" key="search.everywhere.popup" timestamp="1606681542494">
+    <state x="568" y="226" width="848" height="848" key="search.everywhere.popup" timestamp="1606721161288">
       <screen x="64" y="0" width="1856" height="1080" />
     </state>
     <state x="462" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603920270155" />
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1603931559619" />
     <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605564763687" />
-    <state x="568" y="226" width="848" height="848" key="search.everywhere.popup/64.0.1856.1080@64.0.1856.1080" timestamp="1606681542494" />
+    <state x="568" y="226" width="848" height="848" key="search.everywhere.popup/64.0.1856.1080@64.0.1856.1080" timestamp="1606721161288" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Portfolio$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1605389872354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />

@@ -16,10 +16,13 @@ const words_10 = ["RECRUITING", "FLASHLIGHT", "BINOCULARS", "SUPPRESSOR", "DISPO
 const duds = ["[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]"]
 let taken = [];
 let takenCounter = 0;
-let keysBox;
-let key;
+let keysBox_1;
 let animated = [];
 const gameTopLines = ["ROBCO INDUSTRIES (TM) TERMLINK PROTOCOL", "ENTER PASSWORD NOW", "4 ATTEMPT(S) LEFT : "];
+let password = ""; // change this
+let gameWords = [];
+let gameDuds = [];
+let passwordLetters; // really shouldn't be a global variable
 
 function start() {
     document.getElementById('click-to-start').remove();
@@ -29,7 +32,7 @@ function start() {
     // remove active if animation ended
     for (let i = 0; i < animated.length; i++) {
         animated[i].addEventListener('animationstart', () => {
-            printSound.play().then(r => (console.log(r + " sounds played")));
+            printSound.play().then();
         });
         animated[i].addEventListener('animationend', () => {
             // animated[i + 1].classList.add('active');
@@ -37,7 +40,6 @@ function start() {
             printSound.pause();
         });
     }
-
     animated.item(0).classList.toggle('active');
     animated.item(animated.length - 1).addEventListener('animationend', () => {
         printSound.pause();
@@ -50,7 +52,6 @@ function start() {
 
 function openGameScene() {
     // top text being printed
-    console.log("Intro finished");
     animated = [];
     document.getElementById('opening').remove();
     let topText = document.createElement('div');
@@ -61,12 +62,10 @@ function openGameScene() {
         animated[i] = line;
         topText.appendChild(line);
     }
-
     // attempt boxes
     let attemptBox = document.createElement('div');
     attemptBox.id = "attemptBox";
     attemptBox.classList.add('attemptBox');
-    ``
     for (let i = 0; i < 4; i++) {
         let attempt = document.createElement('span');
         attempt.innerText = ' ';
@@ -100,29 +99,46 @@ function printGameBoard() {
     // no fancy animations yet
     let gameScreen = document.createElement('div');
     gameScreen.classList.add('gameScreen');
-    keysBox = document.createElement('div');
-    keysBox.classList.add('gamePcBox');
-    let keys_2 = document.createElement('div');
-    keys_2.classList.add('gamePcBox');
+    keysBox_1 = document.createElement('div');
+    keysBox_1.classList.add('gamePcBox');
+    let keysBox_2 = document.createElement('div');
+    keysBox_2.classList.add('gamePcBox');
     for (let i = 0; i < numLines * numPiecesAcross + 180; i++) {
-        keysBox.appendChild(makeGameNodes());
-        keys_2.appendChild(makeGameNodes());
+        keysBox_1.appendChild(makeGameNodes());
+        keysBox_2.appendChild(makeGameNodes());
     }
-    let keysChildren = keysBox.childNodes;
-    let keys_2Children = keys_2.childNodes;
+    let keysChildren = keysBox_1.childNodes;
+    let keys_2Children = keysBox_2.childNodes;
     for (let i = 0; i < 6; i++) {
         replaceWithFiller(keysChildren, "word");
         replaceWithFiller(keysChildren, "dud");
         replaceWithFiller(keys_2Children, "word");
         replaceWithFiller(keys_2Children, "dud");
     }
+    // for (let i = 0; i < keysChildren.length ; i++) {
+    //     let inner = keysChildren[i].innerHTML;
+    //     if (!inner.classList.contains('gameDud') || !inner.classList.contains('gameWord')) {
+    //         // hacky solution
+    //         keysChildren[i].addEventListener('click', () => {
+    //             printToTerminal(inner.innerText);
+    //             playSound('./assets/sounds/incorrect.wav');
+    //         });
+    //     }
+    // }
+
     gameScreen.appendChild(makeIndexLines());
-    gameScreen.appendChild(keysBox);
+    gameScreen.appendChild(keysBox_1);
     gameScreen.appendChild(document.createElement('div'));
     gameScreen.appendChild(makeIndexLines());
-    gameScreen.appendChild(keys_2);
+    gameScreen.appendChild(keysBox_2);
     gameScreen.appendChild(makeSideTerminal());
     document.getElementById('screen').appendChild(gameScreen);
+    // set password
+    gameWords = document.getElementsByClassName('gameWord');
+    gameDuds = document.getElementsByClassName('gameDud');
+    let ran = Math.floor(Math.random() * gameWords.length);
+    password = gameWords[ran]; // might remove password from list
+    passwordLetters = password.innerText.split("");
 }
 
 function makeSideTerminal() {
@@ -153,15 +169,80 @@ function makeSideTerminal() {
     return sideTerm;
 }
 
-function printToTerminal(str) {
+function printToTerminal(str, correct) {
     let outputBox = document.getElementById('outputBox');
     outputBox.childNodes.item(0).remove();
-    let line = document.createElement('span');
-    let inner = document.createElement('p');
-    inner.innerText = "> " + str;
-    line.appendChild(inner);
+    outputBox.childNodes.item(0).remove();
+    let line1 = document.createElement('span');
+    let line2 = document.createElement('span');
+    let line3 = document.createElement('span');
+    // check input
+    if (str.length === 1 || correct === -1) {
+        line1.innerText = ">" + str;
+        line2.innerText = ">ERROR";
+        outputBox.appendChild(line1);
+        outputBox.appendChild(line2);
+    } else if (str.length === 10) { // rn only using 10 letter words will change later
+        outputBox.childNodes.item(0).remove();
+        if (correct === 10) {
+            outputBox.childNodes.item(0).remove();
+            outputBox.childNodes.item(0).remove();
+            let line4 = document.createElement('span');
+            let line5 = document.createElement('span');
+            line1.innerText = ">" + str;
+            line2.innerText = ">EXACT MATCH!";
+            line3.innerText = ">PLEASE WAIT";
+            line4.innerText = ">WHILE SYSTEM";
+            line5.innerText = ">IS ACCESSED.";
+            outputBox.appendChild(line1);
+            outputBox.appendChild(line2);
+            outputBox.appendChild(line3);
+            outputBox.appendChild(line4);
+            outputBox.appendChild(line5);
+        } else {
+            line1.innerText = ">" + str;
+            line2.innerText = ">ENTRY DENIED";
+            line3.innerText = ">" + correct + "/10 correct.";
+            outputBox.appendChild(line1);
+            outputBox.appendChild(line2);
+            outputBox.appendChild(line3);
+        }
+    } else {
+        line1.innerText = ">" + str;
+        line2.innerText = ">DUD REMOVED";
+        outputBox.appendChild(line1);
+        outputBox.appendChild(line2);
+    }
+}
 
-    outputBox.appendChild(line);
+function checkInput(innerText, type) {
+    console.log(innerText + " " + type);
+    if (type === "dud" && !innerText.includes('.')) {
+        let ran = Math.floor(Math.random() * gameWords.length);
+        while (gameWords.item(ran) === password) { // messy but just trying to get it done at this point
+            ran = Math.floor(Math.random() * gameWords.length);
+        }
+        gameWords[ran].innerText = '..........';
+        printToTerminal(innerText);
+    } else if (type === "word" && !innerText.includes('.')){
+        if (innerText === password) {
+            // win game
+            printToTerminal(innerText, 10);
+        } else {
+            let innerLetter = innerText.split("");
+            console.log(innerLetter);
+            let correct = 0;
+            for (let i = 0; i < innerLetter.length; i++) {
+                if (innerLetter[i] === passwordLetters[i]) {
+                    correct++;
+                    console.log(innerLetter[i]);
+                }
+            }
+            printToTerminal(innerText, correct);
+        }
+    } else {
+        printToTerminal(innerText, -1);
+    }
 }
 
 function replaceWithFiller(children, type) {
@@ -177,21 +258,25 @@ function replaceWithFiller(children, type) {
     if (type === "word") {
         children[randomIndex].childNodes[0].innerText = words_10.pop();
         children[randomIndex].childNodes[0].addEventListener("click", () => {
-            printToTerminal(children[randomIndex].childNodes[0].innerText);
-            console.log(children[randomIndex].childNodes[0].innerText + " clicked");
+            checkInput(children[randomIndex].childNodes[0].innerText, "word");
         });
         children[randomIndex].childNodes[0].classList.add('gameWord');
     } else if (type === "dud") {
         children[randomIndex].childNodes[0].innerText = duds[0];
         children[randomIndex].childNodes[0].classList.add('gameDud');
         children[randomIndex].childNodes[0].addEventListener("click", () => {
-            printToTerminal(children[randomIndex].childNodes[0].innerText);
-            console.log("dud clicked");
+            checkInput(children[randomIndex].childNodes[0].innerText, "dud");
             children[randomIndex].childNodes[0].innerText = "...."
         });
     }
     children[randomIndex].childNodes[0].innerText = type === "word" ? words_10.pop() : duds.pop();
-} // good for now but come back to when your are doing game logic
+}
+
+function clickExtra(span) {
+    printToTerminal(span.innerText);
+    playSound('./assets/sounds/incorrect.wav');
+}
+
 
 function makeGameNodes() {
     // makes the base nodes for the game
@@ -204,9 +289,18 @@ function makeGameNodes() {
         document.getElementById('input').innerText = span.innerText;
         clickSounds[Math.floor(Math.random() * clickSounds.length)].play();
     });
-    span.addEventListener("click", function () {
-        playSound('./assets/sounds/incorrect.wav');
-    })
+    // span.addEventListener('click', (function(passedInElement) {
+    //     return function(e) {clickExtra(e, passedInElement); };
+    // }) (this.span), false);
+    //
+    //
+    // span.addEventListener('click',(function(span) {
+    //     return function (e) {}
+    // }) (this.span))
+    // span.addEventListener('click', clickExtra);
+
+
+
     piece.appendChild(span);
     return piece;
 }
