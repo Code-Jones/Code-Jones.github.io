@@ -65,7 +65,8 @@ function openGameScene() {
     // attempt boxes
     let attemptBox = document.createElement('div');
     attemptBox.id = "attemptBox";
-    attemptBox.classList.add('attemptBox');``
+    attemptBox.classList.add('attemptBox');
+    ``
     for (let i = 0; i < 4; i++) {
         let attempt = document.createElement('span');
         attempt.innerText = ' ';
@@ -139,13 +140,28 @@ function makeSideTerminal() {
     inputBox.appendChild(input);
     // output
     let output = document.createElement('div');
-    let outputText = document.createElement('p');
+    output.id = 'outputBox';
+    for (let i = 0; i < 15; i++) {
+        let line = document.createElement('span');
+        line.appendChild(document.createElement('br'));
+        output.appendChild(line);
+    }
     output.classList.add('outputBox')
-    output.appendChild(outputText);
 
     sideTerm.appendChild(output);
     sideTerm.appendChild(inputBox);
     return sideTerm;
+}
+
+function printToTerminal(str) {
+    let outputBox = document.getElementById('outputBox');
+    outputBox.childNodes.item(0).remove();
+    let line = document.createElement('span');
+    let inner = document.createElement('p');
+    inner.innerText = "> " + str;
+    line.appendChild(inner);
+
+    outputBox.appendChild(line);
 }
 
 function replaceWithFiller(children, type) {
@@ -161,17 +177,17 @@ function replaceWithFiller(children, type) {
     if (type === "word") {
         children[randomIndex].childNodes[0].innerText = words_10.pop();
         children[randomIndex].childNodes[0].addEventListener("click", () => {
-           console.log(children[randomIndex].childNodes[0].innerText + " clicked");
-           // try word for solution
+            printToTerminal(children[randomIndex].childNodes[0].innerText);
+            console.log(children[randomIndex].childNodes[0].innerText + " clicked");
         });
         children[randomIndex].childNodes[0].classList.add('gameWord');
     } else if (type === "dud") {
         children[randomIndex].childNodes[0].innerText = duds[0];
         children[randomIndex].childNodes[0].classList.add('gameDud');
         children[randomIndex].childNodes[0].addEventListener("click", () => {
+            printToTerminal(children[randomIndex].childNodes[0].innerText);
             console.log("dud clicked");
             children[randomIndex].childNodes[0].innerText = "...."
-            // trys up or word changed to ...
         });
     }
     children[randomIndex].childNodes[0].innerText = type === "word" ? words_10.pop() : duds.pop();
@@ -188,6 +204,9 @@ function makeGameNodes() {
         document.getElementById('input').innerText = span.innerText;
         clickSounds[Math.floor(Math.random() * clickSounds.length)].play();
     });
+    span.addEventListener("click", function () {
+        playSound('./assets/sounds/incorrect.wav');
+    })
     piece.appendChild(span);
     return piece;
 }
