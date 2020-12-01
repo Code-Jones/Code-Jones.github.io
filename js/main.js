@@ -79,9 +79,6 @@ function openGameScene() {
         let line = document.createElement('p');
         if (i === 1) {
             line.id = "warning bar";
-            line.addEventListener('animationstart' , () => {
-                playSound('./assets/sounds/censor.wav');
-            })
         }
         line.innerText = gameTopLines[i];
         animated[i] = line;
@@ -91,9 +88,9 @@ function openGameScene() {
     makeAttemptBoxes();
     // animations
     for (let i = 0; i < animated.length; i++) {
-        animated[i].addEventListener('animationstart', playPrintSoundEvent);
-
+        // animated[i].addEventListener('animationstart', playPrintSoundEvent);
         animated[i].addEventListener('animationend', () => {
+
             animated[i].classList.remove('active');
             animated[i].classList.add('afterActive');
             animated[i].style.opacity = '1';
@@ -232,11 +229,18 @@ function printToTerminal(str, correct) {
 }
 
 function winGame() {
-    console.log("win ");
+    document.location.href = "hireMe.html";
 }
 
 function gameOver() {
-    console.log("game over");
+    document.getElementById('screen').remove();
+    let box = document.createElement('div');
+    box.classList.add('centered-2');
+    let overText = document.createElement('p');
+    overText.innerText = "TERMINAL LOCKED";
+    box.appendChild(overText);
+    let sections = document.getElementsByTagName('section');
+    sections[0].appendChild(box);
 }
 
 function removeAttempt() {
@@ -244,8 +248,10 @@ function removeAttempt() {
         let num = document.getElementsByClassName('afterActive');
         num.item(num.length - 2).innerText = "!!! WARNING: LOCKOUT IMMINENT !!!";
         num.item(num.length - 2).classList.add('blinking');
+        playSound('./assets/sounds/censor.wav'); // should be looped ?
     }
     if (attempts === 1) {
+        playSound('./assets/sounds/locked.wav');
         gameOver();
     } else {
         let num = document.getElementsByClassName('afterActive');
@@ -267,9 +273,11 @@ function checkInput(innerText, type) {
         gameWords[ran].innerText = '..........';
         printToTerminal(innerText);
     } else if (type === "word" && !innerText.includes('.')) {
-        if (innerText === password) {
+        if (innerText === password.innerText) {
             // win game
-            winGame();
+            setTimeout(function () {
+                winGame();
+            }, 5000);
             printToTerminal(innerText, 10);
         } else {
             removeAttempt();

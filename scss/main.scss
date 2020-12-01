@@ -211,8 +211,11 @@ footer {
 }
 
 .blinking {
-  -webkit-animation: blink 1s step-end infinite, textShadow 6s infinite;
-  animation: blink 1s step-end infinite, textShadow 6s infinite;
+  -webkit-animation: blinker 1s linear infinite, textShadow 6s infinite;
+  animation: blinker 1s linear infinite, textShadow 6s infinite;
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
+}
+.sound {
+
 }

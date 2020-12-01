@@ -21,20 +21,13 @@
   <component name="ChangeListManager">
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/FalloutDict.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/dictSize_9.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/libs/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/libs/_animations.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webmanifest" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +71,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="liveEdit" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -143,6 +136,7 @@
       <workItem from="1606717742943" duration="92000" />
       <workItem from="1606718353908" duration="9054000" />
       <workItem from="1606753956929" duration="9717000" />
+      <workItem from="1606778467336" duration="5299000" />
     </task>
     <servers />
   </component>
@@ -179,10 +173,11 @@
       <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="120" y="168" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/64.0.1472.864@64.0.1472.864" timestamp="1605390700416" />
-    <state x="530" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603915810495">
-      <screen x="62" y="0" width="1474" height="864" />
+    <state x="531" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1606798142231">
+      <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="530" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603915810495" />
+    <state x="531" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1606798142231" />
     <state x="467" y="196" width="723" height="668" key="EditFileWatcherDialog" timestamp="1603915429630">
       <screen x="62" y="0" width="1474" height="864" />
     </state>
@@ -248,11 +243,12 @@
     <state width="838" height="257" key="GridCell.Tab.1.right/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1603951688915" />
     <state width="1429" height="268" key="GridCell.Tab.1.right/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605555943482" />
     <state width="692" height="271" key="GridCell.Tab.1.right/64.0.1472.864@64.0.1472.864" timestamp="1605582338603" />
-    <state x="308" y="75" key="SettingsEditor" timestamp="1603916178254">
-      <screen x="62" y="0" width="1474" height="864" />
+    <state x="310" y="75" key="SettingsEditor" timestamp="1606798422304">
+      <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="308" y="75" key="SettingsEditor/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603916178254" />
     <state x="308" y="75" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1603907022697" />
+    <state x="310" y="75" key="SettingsEditor/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1606798422304" />
     <state x="1920" y="0" width="1235" height="846" key="dock-window-1" timestamp="1604195692979">
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
@@ -267,12 +263,12 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="422" y="91" key="scopes/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603913112663" />
-    <state x="568" y="226" width="848" height="848" key="search.everywhere.popup" timestamp="1606721161288">
-      <screen x="64" y="0" width="1856" height="1080" />
+    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606798387005">
+      <screen x="64" y="0" width="1472" height="864" />
     </state>
     <state x="462" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603920270155" />
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1603931559619" />
-    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605564763687" />
+    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1606798387005" />
     <state x="568" y="226" width="848" height="848" key="search.everywhere.popup/64.0.1856.1080@64.0.1856.1080" timestamp="1606721161288" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
