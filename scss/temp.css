@@ -1,0 +1,17 @@
+.greenBoxLeft {
+    border-top: #00ef58 solid .2em;
+    border-left: #00ef58 solid .2em;
+    height: fit-content;
+
+}
+
+.greenBoxRight {
+    border-top: #00ef58 solid .2em;
+    border-right: #00ef58 solid .2em;
+    height: fit-content;
+
+}
+.topBar {
+    display: flex;
+    width: 90%;
+}

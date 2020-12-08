@@ -34,6 +34,7 @@
       <list>
         <option value="HTML File" />
         <option value="SCSS File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -56,8 +57,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/sounds" />
-    <property name="list.type.of.created.stylesheet" value="SCSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -66,7 +67,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -94,7 +95,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -133,28 +134,38 @@
       <workItem from="1606753956929" duration="9717000" />
       <workItem from="1606778467336" duration="5765000" />
       <workItem from="1606840652662" duration="5874000" />
+      <workItem from="1606977318407" duration="29000" />
+      <workItem from="1606977348045" duration="116000" />
+      <workItem from="1607101226783" duration="565000" />
+      <workItem from="1607103804084" duration="2367000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="392" y="91" key="#Notifications" timestamp="1603915457185">
-      <screen x="62" y="0" width="1474" height="864" />
+    <state x="320" y="127" key="#File_Watchers" timestamp="1607104331989">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="320" y="127" key="#File_Watchers/0.23.1440.877@0.23.1440.877" timestamp="1607104331989" />
+    <state x="322" y="115" key="#Notifications" timestamp="1607105751565">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="322" y="115" key="#Notifications/0.23.1440.877@0.23.1440.877" timestamp="1607105751565" />
     <state x="392" y="91" key="#Notifications/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603915457185" />
     <state x="254" y="87" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603916186790">
       <screen x="62" y="0" width="1474" height="864" />
@@ -174,9 +185,10 @@
     </state>
     <state x="530" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603915810495" />
     <state x="531" y="179" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1606798142231" />
-    <state x="467" y="196" width="723" height="668" key="EditFileWatcherDialog" timestamp="1603915429630">
-      <screen x="62" y="0" width="1474" height="864" />
+    <state x="396" y="221" width="723" height="668" key="EditFileWatcherDialog" timestamp="1607104330804">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="396" y="221" key="EditFileWatcherDialog/0.23.1440.877@0.23.1440.877" timestamp="1607104330804" />
     <state x="467" y="196" width="723" height="668" key="EditFileWatcherDialog/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603915429630" />
     <state x="580" y="188" key="FileChooserDialogImpl" timestamp="1606173467226">
       <screen x="64" y="0" width="1472" height="864" />
@@ -239,9 +251,10 @@
     <state width="838" height="257" key="GridCell.Tab.1.right/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1603951688915" />
     <state width="1429" height="268" key="GridCell.Tab.1.right/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605555943482" />
     <state width="692" height="271" key="GridCell.Tab.1.right/64.0.1472.864@64.0.1472.864" timestamp="1605582338603" />
-    <state x="310" y="75" key="SettingsEditor" timestamp="1606798422304">
-      <screen x="64" y="0" width="1472" height="864" />
+    <state x="241" y="99" key="SettingsEditor" timestamp="1607104227519">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="241" y="99" key="SettingsEditor/0.23.1440.877@0.23.1440.877" timestamp="1607104227519" />
     <state x="308" y="75" key="SettingsEditor/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603916178254" />
     <state x="308" y="75" key="SettingsEditor/62.0.1474.864@62.0.1474.864" timestamp="1603907022697" />
     <state x="310" y="75" key="SettingsEditor/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1606798422304" />
@@ -249,9 +262,10 @@
       <screen x="1920" y="0" width="1920" height="1050" />
     </state>
     <state x="1920" y="0" width="1235" height="846" key="dock-window-1/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1604195692979" />
-    <state x="560" y="246" width="672" height="677" key="run.anything.popup" timestamp="1606719582161">
-      <screen x="64" y="0" width="1856" height="1080" />
+    <state x="385" y="223" width="522" height="550" key="run.anything.popup" timestamp="1607104258580">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="385" y="223" width="522" height="550" key="run.anything.popup/0.23.1440.877@0.23.1440.877" timestamp="1607104258580" />
     <state x="457" y="197" key="run.anything.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1605497651307" />
     <state x="457" y="197" key="run.anything.popup/64.0.1472.864@64.0.1472.864" timestamp="1605717089671" />
     <state x="560" y="246" width="672" height="677" key="run.anything.popup/64.0.1856.1080@64.0.1856.1080" timestamp="1606719582161" />
@@ -259,9 +273,10 @@
       <screen x="62" y="0" width="1474" height="864" />
     </state>
     <state x="422" y="91" key="scopes/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603913112663" />
-    <state x="464" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606798387005">
-      <screen x="64" y="0" width="1472" height="864" />
+    <state x="391" y="207" width="670" height="689" key="search.everywhere.popup" timestamp="1607104220607">
+      <screen x="0" y="23" width="1440" height="877" />
     </state>
+    <state x="391" y="207" width="670" height="689" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1607104220607" />
     <state x="462" y="181" width="672" height="678" key="search.everywhere.popup/62.0.1474.864/1920.0.1920.1050@62.0.1474.864" timestamp="1603920270155" />
     <state x="463" y="181" width="672" height="678" key="search.everywhere.popup/63.0.1473.864/1920.0.1920.1050@63.0.1473.864" timestamp="1603931559619" />
     <state x="464" y="181" width="672" height="678" key="search.everywhere.popup/64.0.1472.864/1920.0.1920.1050@64.0.1472.864" timestamp="1606798387005" />
