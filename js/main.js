@@ -229,7 +229,7 @@ function printToTerminal(str, correct) {
 }
 
 function winGame() {
-    document.location.href = "hireMe.html";
+    document.location.href = "Terminal.html";
 }
 
 function gameOver() {

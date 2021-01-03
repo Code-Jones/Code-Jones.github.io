@@ -1,0 +1,102 @@
+// possible colors
+//--bg: #1a1e2d;
+//--green: #a5ea9b;
+//--pink: #ff61d8;
+//--blue: #569cfa;
+//--orange: #ffcc81;
+//--cyan: #7ed1e2;
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.8vw;
+}
+
+
+//borders
+.topBar {
+  display: flex;
+  background: rgba(255,255,255,0);
+  div {
+    border-top: #00ef58 solid .1em;
+    height: fit-content;
+    flex-grow: 100;
+    margin-top: .5em;
+  }
+}
+
+.greenBoxLeft {
+  border-left: #00ef58 solid .1em;
+  margin-right: .5em;
+}
+
+.greenBoxRight {
+  border-right: #00ef58 solid .1em;
+  margin-left: .5em;
+  p {
+    float: right;
+  }
+}
+
+.barBottom {
+  display: flex;
+  background: rgba(255,255,255,0);
+  div {
+    border-bottom: #00ef58 solid .1em;
+    height: fit-content;
+    flex-grow: 100;
+    margin-bottom: .5em;
+  }
+}
+
+// screen output
+.wrapperBox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: flex-start;
+}
+
+.topBox {
+  align-content: stretch;
+  margin: .5em;
+}
+
+// terminal
+
+.terminal {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.output {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
+.input {
+  background: rgba(255,255,255,0);
+  color: greenyellow;
+  resize: none;
+  height: 1.8vw;
+  width: 100%;
+  min-width: 2em;
+  overflow: auto;
+}
+
+.commandLine {
+  display: flex;
+  width: 100%;
+}
+#input::after {
+  border-right: greenyellow solid 1em;
+}

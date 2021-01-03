@@ -208,6 +208,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: textShadow 6s infinite;
 }
 footer a, footer a:visited {
   text-decoration: none;

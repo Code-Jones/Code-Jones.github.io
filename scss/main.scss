@@ -34,7 +34,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  animation: textShadow 6s infinite;
   a, a:visited {
     text-decoration: none;
     color: greenyellow;
@@ -220,7 +220,4 @@ footer {
 
 }
 
-.greenBox {
-  border-top: #9ffc0a solid 1em;
-  border-left: #9ffc0a solid 2px;
-}
+
