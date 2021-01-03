@@ -1,39 +1,57 @@
 let input = document.getElementById("input");
 let output = document.getElementById('output');
-let commandList = [];
+let pastCommandList = [];
+const commandList = ["ls", "pwd", "cd", "find", "chmod", "ping", "history", "man", "clear", "pushd"]
+let index = 0;
+input.focus();
 
 
-input.addEventListener("keyup", function(event) {
-    let index = 0;
+ // input listeners
+input.addEventListener("keyup", function (event) {
     if (event.key === 'Enter') {
         event.preventDefault();
         let cmd = input.value;
-        printToTerminal(cmd);
-        commandList.unshift(cmd);
+        checkInput(cmd);
+        pastCommandList.unshift(cmd);
         input.value = "";
     } else if (event.key === 'ArrowUp') {
-        if (commandList.length !== 0) {
-            input.value = commandList.indexOf(index);
+        if (pastCommandList.length !== 0 && index <= pastCommandList.length - 1 && index >= 0) {
+            input.value = pastCommandList[index];
             index++;
         }
     } else if (event.key === 'ArrowDown') {
-        if (commandList.length !== 0 || index >= 1) {
-            input.value = commandList.indexOf(index);
+        if (pastCommandList.length !== 0 && index <= pastCommandList.length && index > 1) {
+            input.value = pastCommandList[index - 2];
             index--;
         }
     }
 });
 
+input.addEventListener("focusout", function (event){
+    index = 0;
+});
 
+function checkInput(str) {
+    if (str !== "") {
+        switch (str) {
+            case "history":
+                for (let i = 0; i < pastCommandList.length - 1; i++) {
+                    printToTerminal(pastCommandList[i]);
+                }
+                break;
+            case "clear":
+            case "clr":
+                while (output.firstChild) {
+                    output.removeChild(output.lastChild);
+                }
+                break;
+            default:
+                printToTerminal(str);
+                printToTerminal("Command not recognized");
+                printToTerminal("Enter 'help' for a list of commands");
+                break;
 
-function printTerminalBlank() {
-    // calc the size of the screen to get correct size // might not needed now
-
-    let output = document.getElementById('output');
-    for (let i = 0; i < 19; i++) {
-        let line = document.createElement('span');
-        line.appendChild(document.createElement('br'));
-        output.appendChild(line);
+        }
     }
 }
 

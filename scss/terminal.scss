@@ -12,7 +12,7 @@
   border: 0;
   vertical-align: baseline;
   font-family: 'Share Tech Mono', monospace;
-  font-size: 1.8vw;
+  font-size: 1.5vw;
 }
 
 
@@ -87,16 +87,16 @@
   background: rgba(255,255,255,0);
   color: greenyellow;
   resize: none;
-  height: 1.8vw;
+  height: 1.5vw;
   width: 100%;
   min-width: 2em;
   overflow: auto;
+  outline: none;
+  caret-shape: underscore;
+  caret: aliceblue underscore;
 }
 
 .commandLine {
   display: flex;
   width: 100%;
-}
-#input::after {
-  border-right: greenyellow solid 1em;
 }

@@ -23,15 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hireMe.html" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/temp.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/terminal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/terminal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/terminal.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/terminal.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/terminal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +42,7 @@
         <option value="CSS File" />
         <option value="SCSS File" />
         <option value="JavaScript File" />
+        <option value="HTTP Request" />
       </list>
     </option>
   </component>
@@ -150,7 +148,8 @@
       <workItem from="1607103804084" duration="2367000" />
       <workItem from="1609607309727" duration="2850000" />
       <workItem from="1609612952084" duration="204000" />
-      <workItem from="1609613167192" duration="19376000" />
+      <workItem from="1609613167192" duration="24911000" />
+      <workItem from="1609697672907" duration="2863000" />
     </task>
     <servers />
   </component>
