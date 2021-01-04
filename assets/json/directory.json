@@ -1,69 +1,71 @@
-[
-  {
-    "path": "C:/",
-    "name": "home",
-    "type": "directory",
-    "children": [
-      {
-        "path": "C:/ReadMe.txt",
-        "name": "ReadMe.txt",
-        "type": "txt"
-      },
-      {
-        "path": "C:/Projects",
-        "name": "Projects",
-        "type": "directory",
-        "children": [
-          {
-            "path": "C:/Projects/ProjectDesc.txt",
-            "name": "ProjectDesc.txt",
-            "type": "txt"
-          },
-          {
-            "path": "C:/Projects/School_Stuff",
-            "name": "School_Stuff",
-            "type": "directory",
-            "children": [
-              {
-                "path": "C:/Projects/School_Stuff/Web",
-                "name": "Web",
-                "type": "directory",
-                "children": [
-                  {
-                    "path": "C:/Projects/School_Stuff/Web/Web_Class_Projects.txt",
-                    "name": "Web_Class_Projects.txt",
-                    "type": "txt"
-                  }
-                ]
-              },
-              {
-                "path": "C:/Projects/School_Stuff/Java",
-                "name": "Java",
-                "type": "directory",
-                "children": [
-                  {
-                    "path": "C:/Projects/School_Stuff/Java/Java_Class_Projects.txt",
-                    "name": "Java_Class_Projects.txt",
-                    "type": "txt"
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "path": "C:/Projects/Fun_Side_Projects",
-            "name": "Fun_Side_Projects",
-            "type": "directory",
-            "children": []
-          }
-        ]
-      },
-      {
-        "path": "C:/start_game.exe",
-        "name": "home",
-        "type": "exe",
-        "function": {"arguments": "index.html", "body": "document.location.href = index.html"}
+{
+  "path": "C:/",
+  "name": "home",
+  "type": "directory",
+  "children": [
+    {
+      "path": "C:/ReadMe.txt",
+      "name": "ReadMe.txt",
+      "type": "txt"
+    },
+    {
+      "path": "C:/Projects",
+      "name": "Projects",
+      "type": "directory",
+      "children": [
+        {
+          "path": "C:/Projects/ProjectDesc.txt",
+          "name": "ProjectDesc.txt",
+          "type": "txt"
+        },
+        {
+          "path": "C:/Projects/School_Stuff",
+          "name": "School_Stuff",
+          "type": "directory",
+          "children": [
+            {
+              "path": "C:/Projects/School_Stuff/Web",
+              "name": "Web",
+              "type": "directory",
+              "children": [
+                {
+                  "path": "C:/Projects/School_Stuff/Web/Web_Class_Projects.txt",
+                  "name": "Web_Class_Projects.txt",
+                  "type": "txt"
+                }
+              ]
+            },
+            {
+              "path": "C:/Projects/School_Stuff/Java",
+              "name": "Java",
+              "type": "directory",
+              "children": [
+                {
+                  "path": "C:/Projects/School_Stuff/Java/Java_Class_Projects.txt",
+                  "name": "Java_Class_Projects.txt",
+                  "type": "txt"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "C:/Projects/Fun_Side_Projects",
+          "name": "Fun_Side_Projects",
+          "type": "directory",
+          "children": []
+        }
+      ]
+    },
+    {
+      "path": "C:/start_game.exe",
+      "name": "home",
+      "type": "exe",
+      "function": {
+        "arguments": "index.html",
+        "body": "document.location.href = index.html"
       }
-    ]
-  }
-]
+    }
+  ]
+}
+

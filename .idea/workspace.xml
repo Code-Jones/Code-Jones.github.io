@@ -24,11 +24,8 @@
   <component name="ChangeListManager">
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/json/directory.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/directory.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/terminal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/terminal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/terminal.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/terminal.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/terminal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +62,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/AppData/Roaming/npm/sass.cmd" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -75,19 +72,20 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\Fallout\Portfolio" />
       <recent name="C:\Work\Portfolio\assets\sounds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Fallout\Portfolio\assets\json" />
+      <recent name="D:\Projects\Fallout\Portfolio" />
       <recent name="C:\Work\Portfolio" />
       <recent name="C:\Work\Portfolio\assets\sounds" />
       <recent name="C:\Work\Portfolio\assets" />
-      <recent name="C:\Work\Portfolio\scss\libs" />
-      <recent name="C:\Work\Portfolio\css" />
     </key>
   </component>
   <component name="RunManager">
@@ -149,7 +147,7 @@
       <workItem from="1609607309727" duration="2850000" />
       <workItem from="1609612952084" duration="204000" />
       <workItem from="1609613167192" duration="24911000" />
-      <workItem from="1609697672907" duration="2863000" />
+      <workItem from="1609697672907" duration="14274000" />
     </task>
     <servers />
   </component>
@@ -173,6 +171,6 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Portfolio$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1605389872354" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Portfolio$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1609725585138" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
