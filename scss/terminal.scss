@@ -1,11 +1,3 @@
-// possible colors
-//--bg: #1a1e2d;
-//--green: #a5ea9b;
-//--pink: #ff61d8;
-//--blue: #569cfa;
-//--orange: #ffcc81;
-//--cyan: #7ed1e2;
-
 * {
   margin: 0;
   padding: 0;
@@ -20,11 +12,19 @@
 .topBar {
   display: flex;
   background: rgba(255,255,255,0);
+  animation: textShadow 6s infinite;
   div {
     border-top: #00ef58 solid .1em;
     height: fit-content;
     flex-grow: 100;
     margin-top: .5em;
+  }
+  a, a:visited {
+    text-decoration: none;
+    color: greenyellow;
+  }
+  a:hover {
+    color: white;
   }
 }
 
@@ -36,7 +36,7 @@
 .greenBoxRight {
   border-right: #00ef58 solid .1em;
   margin-left: .5em;
-  p {
+  a {
     float: right;
   }
 }
@@ -44,11 +44,20 @@
 .barBottom {
   display: flex;
   background: rgba(255,255,255,0);
+  animation: textShadow 6s infinite;
   div {
     border-bottom: #00ef58 solid .1em;
     height: fit-content;
     flex-grow: 100;
     margin-bottom: .5em;
+  }
+  a, a:visited {
+    text-decoration: none;
+    color: greenyellow;
+  }
+
+  a:hover {
+    color: white;
   }
 }
 
@@ -58,18 +67,15 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: flex-start;
-}
-
-.topBox {
-  align-content: stretch;
   margin: .5em;
 }
 
-// terminal
 
+
+// terminal
 .terminal {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -79,8 +85,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   word-wrap: break-word;
+
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent; /* make scrollbar transparent */
 }
 
 .input {

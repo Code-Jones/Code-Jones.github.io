@@ -1,12 +1,19 @@
 {
-  "path": "C:/",
-  "name": "home",
+  "path": "C:",
+  "name": "C:",
   "type": "directory",
   "children": [
     {
       "path": "C:/ReadMe.txt",
       "name": "ReadMe.txt",
-      "type": "txt"
+      "type": "txt",
+      "local": "./assets/readmes/ReadMe.txt"
+    },
+    {
+      "path": "C:/try_me.html",
+      "name": "try_me.html",
+      "type": "html",
+      "url": "https://youtu.be/oHg5SJYRHA0"
     },
     {
       "path": "C:/Projects",
@@ -59,11 +66,10 @@
     },
     {
       "path": "C:/start_game.exe",
-      "name": "home",
+      "name": "start_game.exe",
       "type": "exe",
       "function": {
-        "arguments": "index.html",
-        "body": "document.location.href = index.html"
+        "body": "document.location.href = 'index.html' "
       }
     }
   ]

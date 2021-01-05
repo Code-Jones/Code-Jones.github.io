@@ -10,12 +10,20 @@
 .topBar {
   display: flex;
   background: rgba(255, 255, 255, 0);
+  animation: textShadow 6s infinite;
 }
 .topBar div {
   border-top: #00ef58 solid 0.1em;
   height: fit-content;
   flex-grow: 100;
   margin-top: 0.5em;
+}
+.topBar a, .topBar a:visited {
+  text-decoration: none;
+  color: greenyellow;
+}
+.topBar a:hover {
+  color: white;
 }
 
 .greenBoxLeft {
@@ -27,13 +35,14 @@
   border-right: #00ef58 solid 0.1em;
   margin-left: 0.5em;
 }
-.greenBoxRight p {
+.greenBoxRight a {
   float: right;
 }
 
 .barBottom {
   display: flex;
   background: rgba(255, 255, 255, 0);
+  animation: textShadow 6s infinite;
 }
 .barBottom div {
   border-bottom: #00ef58 solid 0.1em;
@@ -41,22 +50,25 @@
   flex-grow: 100;
   margin-bottom: 0.5em;
 }
+.barBottom a, .barBottom a:visited {
+  text-decoration: none;
+  color: greenyellow;
+}
+.barBottom a:hover {
+  color: white;
+}
 
 .wrapperBox {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-content: flex-start;
-}
-
-.topBox {
-  align-content: stretch;
   margin: 0.5em;
 }
 
 .terminal {
   width: 100%;
-  height: 80vh;
+  height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -66,8 +78,15 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   word-wrap: break-word;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  /* make scrollbar transparent */
 }
 
 .input {
