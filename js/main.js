@@ -1,12 +1,12 @@
 let printSound = new Audio('./assets/sounds/print.wav');
-let s1 = new Audio('./assets/sounds/key1.wav'); // change this
-let s2 = new Audio('./assets/sounds/key2.wav');
-let s3 = new Audio('./assets/sounds/key3.wav');
-let s4 = new Audio('./assets/sounds/key4.wav');
-let s5 = new Audio('./assets/sounds/key5.wav');
-let s6 = new Audio('./assets/sounds/key6.wav');
-let s7 = new Audio('./assets/sounds/key7.wav');
-let clickSounds = [s1, s2, s3, s4, s5, s6, s7];
+const s1 = new Audio('./assets/sounds/key1.wav'); // change this
+const s2 = new Audio('./assets/sounds/key2.wav');
+const s3 = new Audio('./assets/sounds/key3.wav');
+const s4 = new Audio('./assets/sounds/key4.wav');
+const s5 = new Audio('./assets/sounds/key5.wav');
+const s6 = new Audio('./assets/sounds/key6.wav');
+const s7 = new Audio('./assets/sounds/key7.wav');
+const clickSounds = [s1, s2, s3, s4, s5, s6, s7];
 printSound.loop = true;
 let newIndex = null;
 newIndex = makeIndex(newIndex);
@@ -24,6 +24,8 @@ let gameWords = [];
 let gameDuds = [];
 let attempts = 4;
 let passwordLetters; // really shouldn't be a global variable
+let fan;
+let hardDrive;
 
 function start() {
     document.getElementById('click-to-start').remove();
@@ -275,7 +277,10 @@ function checkInput(innerText, type) {
     } else if (type === "word" && !innerText.includes('.')) {
         if (innerText === password.innerText) {
             // win game
+
             setTimeout(function () {
+                sessionStorage.setItem("fanTime", fan.currentTime);
+                sessionStorage.setItem("hardDriveTime", hardDrive.currentTime);
                 winGame();
             }, 5000);
             printToTerminal(innerText, 10);
@@ -382,11 +387,11 @@ function makeIndex(line) {
 
 function playBackgroundSounds() {
     // This plays the background sounds that play throughout the game.
-    let fan = new Audio("./assets/sounds/computer_fan.mp3");
-    let hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
+    fan = new Audio("./assets/sounds/computer_fan.mp3");
+    hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
+    fan.loop = true;
     fan.play();
     hardDrive.loop = true;
-    hardDrive.load();
     hardDrive.play();
 }
 

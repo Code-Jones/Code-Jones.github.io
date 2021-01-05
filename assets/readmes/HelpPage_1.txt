@@ -1,0 +1,13 @@
+Welcome to RoboTermLink terminal
+
+This terminal has been repurposed to demonstrate the admins ability for front end development
+Please use the list of commands below to navigate the directory and explore
+
+cd [path]: change directory ex: cd Projects
+ls: show directory
+clear: clears screen
+history: shows history of commands
+pwd: print working directory
+open [filename]: open file ex: open start_game.exe
+help: shows list of commands
+press the up and down arrows to retrieve the last commands

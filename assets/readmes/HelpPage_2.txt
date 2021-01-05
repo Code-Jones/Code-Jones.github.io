@@ -1,0 +1,15 @@
+Navigation help
+
+To navigate directories please type the command cd followed by the directory you would like to access
+For example 'cd School_Stuff' / 'cd Fun_Side_Projects'
+To go the the parent directory (preceding directory) please type 'cd ..' as .. is the symbol for parent directory
+To go back to the home directory please type 'cd ~' as ~ is the symbol for the home directory
+When changing directories, the terminal is case sensitive and spelling has to be correct
+
+Display directory help
+
+To display the contents of the current directory please type ls
+This will show all the files and directory within the pwd (present working directory)
+Files without an extension such as .html or .txt are directories and can be opened
+
+To close this window click on Help again

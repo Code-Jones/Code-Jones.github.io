@@ -4,18 +4,20 @@ let pastCommandList = [];
 let index = 0;
 let tree;
 let currentDir;
+let first = true;
 const defaultPrompt = "root@RoboTermLink>";
+const s1 = new Audio('./assets/sounds/key1.wav');
+const s2 = new Audio('./assets/sounds/key2.wav');
+const s3 = new Audio('./assets/sounds/key3.wav');
+const s4 = new Audio('./assets/sounds/key4.wav');
+const s5 = new Audio('./assets/sounds/key5.wav');
+const s6 = new Audio('./assets/sounds/key6.wav');
+const s7 = new Audio('./assets/sounds/key7.wav');
+const enter = new Audio('./assets/sounds/correct.wav');
+const clickSounds = [s1, s2, s3, s4, s5, s6, s7];
 
-// todo
-//  - fix bottom box effect
-//  - finish readmes
-//  - add to json
-//  - add sounds effects
-//  - change to json
-//  - fix responsive
-//  - test
-//  - clean code
-//  - check with aaron
+input.focus();
+printHelp();
 
 fetch("./assets/json/directory.json").then(response => response.json()).then(data => {
     tree = data;
@@ -23,7 +25,31 @@ fetch("./assets/json/directory.json").then(response => response.json()).then(dat
     changePrompt(currentDir);
 });
 
-input.focus();
+function openHelp() {
+    let help = document.getElementsByClassName('help').item(0);
+    if (help.style.display === "none"){
+        getPage()
+        help.style.display = "block";
+    } else {
+        getPage()
+        help.style.display = "none";
+    }
+}
+
+function getPage(){
+    let btn = document.getElementById('pageButton');
+    if (btn.value === "Page 1") {
+        fetch("./assets/readmes/HelpPage_1.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
+        btn.value = "Page 2";
+        btn.innerText = "Page 1";
+    } else {
+        fetch("./assets/readmes/HelpPage_2.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
+        btn.value = "Page 1";
+        btn.innerText = "Page 2"
+    }
+
+}
+
 
 // input listeners
 input.addEventListener("keyup", function (event) {
@@ -33,6 +59,7 @@ input.addEventListener("keyup", function (event) {
         checkInput(cmd);
         pastCommandList.unshift(cmd);
         input.value = "";
+        enter.play();
     } else if (event.key === 'ArrowUp') {
         if (pastCommandList.length !== 0 && index <= pastCommandList.length - 1 && index >= 0) {
             input.value = pastCommandList[index];
@@ -44,14 +71,19 @@ input.addEventListener("keyup", function (event) {
             index--;
         }
     }
+    clickSounds[Math.floor(Math.random() * clickSounds.length)].play();
 });
 
 input.addEventListener("focusout", function () {
     index = 0;
 });
 
-document.getElementById("screen").addEventListener("click", function (event) {
-   input.focus();
+document.getElementById("screen").addEventListener("click", function () {
+   if (first) {
+       playBackgroundSounds();
+       first = false;
+   }
+    input.focus();
 });
 
 
@@ -101,41 +133,43 @@ function printToTerminal(str) {
     let line = document.createElement('span');
     line.innerText = str;
     output.appendChild(line);
-    output.scrollTop = output.scrollHeight;
+    document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
 }
 
 function printHelp() {
-    printToTerminal(
-        "Welcome to RoboTermLink terminal\n" +
-        "This terminal has been repurposed to demonstrate the admins ability for front end development\n" +
-        "Please use the list of commands below\n" +
-        "to navigate the directory and explore\n" +
-        "cd [path]: change directory ex: cd Projects\n" +
-        "ls: show directory\n" +
-        "clear: clears screen\n" +
-        "history: shows history of commands\n" +
-        "pwd: print working directory\n" +
-        "open [filename]: open file ex: open start_game.exe\n" +
-        "help: shows list of commands\n\n" +
-        "press the up and down arrows to retrieve the last commands\n\n" +
-        "For extra help with navigating directories please type 'help cd'\n"
-    );
+    fetch("./assets/readmes/HelpPage_1.txt").then(response => response.text()).then(text => printToTerminal(text));
+    // printToTerminal(
+    //     "Welcome to RoboTermLink terminal\n" +
+    //     "This terminal has been repurposed to demonstrate the admins ability for front end development\n" +
+    //     "Please use the list of commands below\n" +
+    //     "to navigate the directory and explore\n\n" +
+    //     "cd [path]: change directory ex: cd Projects\n" +
+    //     "ls: show directory\n" +
+    //     "clear: clears screen\n" +
+    //     "history: shows history of commands\n" +
+    //     "pwd: print working directory\n" +
+    //     "open [filename]: open file ex: open start_game.exe\n" +
+    //     "help: shows list of commands\n\n" +
+    //     "press the up and down arrows to retrieve the last commands\n\n" +
+    //     "For extra help with navigating directories please type 'help cd'\n"
+    // );
 }
 
 function printNavHelp() {
-    printToTerminal(
-        "Welcome to RoboTermLink terminal\n\n" +
-        "Navigation help\n\n" +
-        "To navigate directories please type the command cd followed by the directory you would like to access\n" +
-        "For example 'cd School_Stuff' / 'cd Fun_Side_Projects'\n" +
-        "To go the the parent directory (preceding directory) please type 'cd ..' as .. is the symbol for parent directory\n" +
-        "To go back to the home directory please type 'cd ~' as ~ is the symbol for the home directory\n" +
-        "When changing directories, the terminal is case sensitive and spelling has to be correct\n\n" +
-        "Display directory help\n\n" +
-        "To display the contents of the current directory please type ls\n" +
-        "This will show all the files and directory within the pwd (present working directory)\n" +
-        "Files without an extension such as .html or .txt are directories and can be opened\n"
-    );
+    fetch("./assets/readmes/HelpPage_2.txt").then(response => response.text()).then(text => printToTerminal(text));
+    // printToTerminal(
+    //     "Welcome to RoboTermLink terminal\n\n" +
+    //     "Navigation help\n\n" +
+    //     "To navigate directories please type the command cd followed by the directory you would like to access\n" +
+    //     "For example 'cd School_Stuff' / 'cd Fun_Side_Projects'\n" +
+    //     "To go the the parent directory (preceding directory) please type 'cd ..' as .. is the symbol for parent directory\n" +
+    //     "To go back to the home directory please type 'cd ~' as ~ is the symbol for the home directory\n" +
+    //     "When changing directories, the terminal is case sensitive and spelling has to be correct\n\n" +
+    //     "Display directory help\n\n" +
+    //     "To display the contents of the current directory please type ls\n" +
+    //     "This will show all the files and directory within the pwd (present working directory)\n" +
+    //     "Files without an extension such as .html or .txt are directories and can be opened\n"
+    // );
 }
 
 function changeDirectory(arg) {
@@ -217,7 +251,6 @@ function printCurrentPath() {
     printToTerminal(currentDir.path);
 }
 
-
 function openFile(args) {
     if (args === "") {
         printToTerminal("Error: Blank path");
@@ -257,4 +290,18 @@ function goToParentDir() {
 
 function changePrompt() {
     document.getElementById('prompt').innerText = currentDir.path;
+}
+
+function playBackgroundSounds() {
+    // This plays the background sounds
+    let fanTime = sessionStorage.getItem("fanTime");
+    let hardDriveTime = sessionStorage.getItem("hardDriveTime");
+    let fan = new Audio("./assets/sounds/computer_fan.mp3");
+    let hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
+    fan.currentTime = parseFloat(fanTime);
+    fan.loop = true;
+    fan.play();
+    hardDrive.loop = true;
+    hardDrive.currentTime = parseFloat(hardDriveTime);
+    hardDrive.play();
 }
