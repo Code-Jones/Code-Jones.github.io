@@ -1,7 +1,4 @@
-$externalMargin: 0.5em;
-$borderGreen: #00ef58;
-$borderSize: 0.2em;
-$font-Size: 2vh;
+@import "libs/var";
 
 * {
   font-size: $font-Size;
@@ -110,17 +107,22 @@ $font-Size: 2vh;
   background: transparent; /* make scrollbar transparent */
 }
 
-.help {
-  position: fixed;
-  text-align: center;
-  height: fit-content;
-  width: fit-content;
-  padding: .5em;
-  background: rgba(0,0,0, 1);
-  box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.7);
-  border-radius: .33em;
-  z-index: -1;
-  button {
-    margin: .5em;
-  }
+.pipBoy {
+  opacity: 0.5;
+  min-width: 30%;
 }
+//
+//.help {
+//  position: fixed;
+//  text-align: center;
+//  height: fit-content;
+//  width: fit-content;
+//  padding: .5em;
+//  background: rgba(0,0,0, 1);
+//  box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.7);
+//  border-radius: .33em;
+//  z-index: -1;
+//  button {
+//    margin: .5em;
+//  }
+//}

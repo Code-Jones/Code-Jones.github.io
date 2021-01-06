@@ -413,4 +413,34 @@ function shuffle(a) {
     return a;
 }
 
+document.getElementById('screen').addEventListener("click", function () {
+    let help = document.getElementById('help');
+    if (help.style.display === "block") {
+        help.style.display = "none";
+    }
+});
 
+function openHelp() {
+    let help = document.getElementsByClassName('help').item(0);
+    if (help.style.display === "none"){
+        getPage()
+        help.style.display = "block";
+    } else {
+        getPage()
+        help.style.display = "none";
+    }
+}
+
+function getPage(){
+    let btn = document.getElementById('pageButton');
+    if (btn.value === "Page 1") {
+        fetch("./assets/readmes/GameHelpPage_1.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
+        btn.value = "Page 2";
+        btn.innerText = "Page 1";
+    } else {
+        fetch("./assets/readmes/GameHelpPage_2.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
+        btn.value = "Page 1";
+        btn.innerText = "Page 2"
+    }
+
+}

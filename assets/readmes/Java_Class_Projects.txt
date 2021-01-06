@@ -1,3 +1,11 @@
-java class projects
+Java Projects from School
 
-to do : write this
+Java was our main language throughout school and so I had made quite a few projects with it.
+Java wasn't my first language that I learned, Python was. So when I started working with Java
+I found it very frustrating. Python is very easy to pick up, I call it a lazy language now,
+but Java is a strongly typed and focuses heavily on Object Oriented Programming (OOP). I wasn't very
+good at OOP at that time ( I found with python, functional programming would suffice most of
+the time ). Now I really appreciate these qualities within Java and enjoy the OOP way of thinking.
+
+This directory will show some of the projects I've done over the last 2 years. Please check out
+some of my projects to see my progression.

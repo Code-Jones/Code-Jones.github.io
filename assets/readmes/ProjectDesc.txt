@@ -1,3 +1,6 @@
-project desc
+Project Description
 
-write this
+The following directory will show of some of my projects over the last
+two years. Most are not complete (typical programmer) but I will get
+back to them at some point. I've split this into school projects and
+fun projects.

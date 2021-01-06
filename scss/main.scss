@@ -1,5 +1,6 @@
 @import "libs/var";
 @import "libs/animations";
+@import "libs/fonts";
 
 * {
   margin: 0;
@@ -9,6 +10,7 @@
   font-family: 'Share Tech Mono', monospace;
   font-size: 1.8vw;
 }
+
 
 header {
   animation: textShadow 6s infinite;
@@ -216,8 +218,20 @@ footer {
   -webkit-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
 }
-.sound {
 
+.help {
+  position: fixed;
+  text-align: center;
+  height: fit-content;
+  width: fit-content;
+  padding: .5em;
+  background: rgba(0,0,0, 1);
+  box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.7);
+  border-radius: .33em;
+  z-index: 2;
+  button {
+    margin: .5em;
+  }
 }
 
 

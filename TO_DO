@@ -1,19 +1,16 @@
 TODO Terminal
     {
-     - finish readmes
-    - add to json / clean github?
-    }
-    {
     - fix responsive / terminal seems good
-    - make help for main game
-    - add listener to close help
     - animation
     }
     - change to json
     - test
     - clean code
     - check with aaron
+    - update readmes
+     - add to json / clean github?
     extra
+    - mute button
     - add click sound to 2 page intro
     - add reload lives
     - add difficulty level

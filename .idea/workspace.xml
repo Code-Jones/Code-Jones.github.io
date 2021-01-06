@@ -26,13 +26,20 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TO_DO" beforeDir="false" afterPath="$PROJECT_DIR$/TO_DO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/d6qg0rh-c1a549c6-05be-433e-bdd9-ba6e245897d8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/d9b78gh-8f538061-95ab-4bed-aa96-9476b18a1be8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/grayscreen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/images/terminal_bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/readmes/HelpPage_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/TermHelpPage_1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/readmes/HelpPage_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/TermHelpPage_2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/readmes/Java_Class_Projects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/Java_Class_Projects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/readmes/ProjectDesc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/ProjectDesc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/readmes/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/ReadMe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/readmes/Web_Class_Projects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/Web_Class_Projects.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/directory.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/terminal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/terminal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/libs/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/libs/_var.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/terminal.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/terminal.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/terminal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.scss" afterDir="false" />
@@ -47,9 +54,9 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="SCSS File" />
         <option value="JavaScript File" />
         <option value="HTTP Request" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -92,11 +99,11 @@
       <recent name="C:\Work\Portfolio\assets\sounds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Fallout\Portfolio\assets\fonts\Share_Tech_Mono.zip" />
+      <recent name="D:\Projects\Fallout\Portfolio\assets\images" />
       <recent name="D:\Projects\Fallout\Portfolio\assets\json" />
       <recent name="D:\Projects\Fallout\Portfolio" />
       <recent name="C:\Work\Portfolio" />
-      <recent name="C:\Work\Portfolio\assets\sounds" />
-      <recent name="C:\Work\Portfolio\assets" />
     </key>
   </component>
   <component name="RunManager">
@@ -159,7 +166,9 @@
       <workItem from="1609612952084" duration="204000" />
       <workItem from="1609613167192" duration="24911000" />
       <workItem from="1609697672907" duration="14939000" />
-      <workItem from="1609778249663" duration="42218000" />
+      <workItem from="1609778249663" duration="42517000" />
+      <workItem from="1609864249174" duration="10841000" />
+      <workItem from="1609891022615" duration="1456000" />
     </task>
     <servers />
   </component>
@@ -177,6 +186,18 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/js/terminal.js</url>
+          <line>83</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

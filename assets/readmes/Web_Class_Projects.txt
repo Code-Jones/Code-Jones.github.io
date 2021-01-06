@@ -1,3 +1,8 @@
-web class projects
+Web Class Projects
 
-to do : write this
+Some of my favorite classes in school were my web classes. As you can see I enjoy making
+websites. Most of the projects below will be from my front-end and back-end classes. My
+front-end class focused solely on html/css/js within static sites. The scope was narrow
+but we had creative freedom. Our back-end class focused on using vanilla Java. We used
+Apache Tomcat and MySql to my a server and persist data. The back-end projects will have
+very little decoration as they were designed to focus on functionality.

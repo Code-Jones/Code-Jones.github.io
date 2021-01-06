@@ -39,11 +39,11 @@ function openHelp() {
 function getPage(){
     let btn = document.getElementById('pageButton');
     if (btn.value === "Page 1") {
-        fetch("./assets/readmes/HelpPage_1.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
+        fetch("./assets/readmes/TermHelpPage_1.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
         btn.value = "Page 2";
         btn.innerText = "Page 1";
     } else {
-        fetch("./assets/readmes/HelpPage_2.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
+        fetch("./assets/readmes/TermHelpPage_2.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
         btn.value = "Page 1";
         btn.innerText = "Page 2"
     }
@@ -82,6 +82,10 @@ document.getElementById("screen").addEventListener("click", function () {
    if (first) {
        playBackgroundSounds();
        first = false;
+   }
+   let help = document.getElementById('help');
+   if (help.style.display === "block") {
+       help.style.display = "none";
    }
     input.focus();
 });
@@ -137,7 +141,7 @@ function printToTerminal(str) {
 }
 
 function printHelp() {
-    fetch("./assets/readmes/HelpPage_1.txt").then(response => response.text()).then(text => printToTerminal(text));
+    fetch("./assets/readmes/TermHelpPage_1.txt").then(response => response.text()).then(text => printToTerminal(text));
     // printToTerminal(
     //     "Welcome to RoboTermLink terminal\n" +
     //     "This terminal has been repurposed to demonstrate the admins ability for front end development\n" +
@@ -156,7 +160,7 @@ function printHelp() {
 }
 
 function printNavHelp() {
-    fetch("./assets/readmes/HelpPage_2.txt").then(response => response.text()).then(text => printToTerminal(text));
+    fetch("./assets/readmes/TermHelpPage_2.txt").then(response => response.text()).then(text => printToTerminal(text));
     // printToTerminal(
     //     "Welcome to RoboTermLink terminal\n\n" +
     //     "Navigation help\n\n" +
@@ -294,14 +298,20 @@ function changePrompt() {
 
 function playBackgroundSounds() {
     // This plays the background sounds
-    let fanTime = sessionStorage.getItem("fanTime");
-    let hardDriveTime = sessionStorage.getItem("hardDriveTime");
     let fan = new Audio("./assets/sounds/computer_fan.mp3");
     let hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
-    fan.currentTime = parseFloat(fanTime);
-    fan.loop = true;
-    fan.play();
-    hardDrive.loop = true;
-    hardDrive.currentTime = parseFloat(hardDriveTime);
-    hardDrive.play();
+    try {
+        let fanTime = sessionStorage.getItem("fanTime");
+        let hardDriveTime = sessionStorage.getItem("hardDriveTime");
+        fan.currentTime = parseFloat(fanTime);
+        hardDrive.currentTime = parseFloat(hardDriveTime);
+
+    } catch (e) {
+        console.log("Could not find sound times. Playing regardless");
+    } finally {
+        fan.loop = true;
+        hardDrive.loop = true;
+        fan.play();
+        hardDrive.play();
+    }
 }

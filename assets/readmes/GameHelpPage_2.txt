@@ -1,0 +1,20 @@
+Correct letters are of the same type AND position
+Password = THEREAFTER;
+
+   >TOOTHBRUSH
+   >ENTRY DENIED
+   >1/10 correct.
+    T is correct
+
+   >HELICOPTER
+   >ENTRY DENIED
+   >3/10 correct.
+   TER is correct
+
+   >THEREAFTER
+   >EXACT MATCH!
+   >PLEASE WAIT
+   >WHILE SYSTEM
+   >IS ACCESSED.
+
+Press Help again to close

@@ -1,0 +1,21 @@
+Hack the Termlink Terminal
+
+This game is inspired by the fallout terminal and plays the same way.
+There is a link below that shows the original and how it works.
+
+Game Objective:
+
+Find the password out of the given words. The password is dynamically
+chosen each game. Each wrong answer will tell you which letters are
+correct. This means the letter and it's position within the word is
+correct. There are secret bugs within the code, if you find them you
+will be rewarded by removing a false answer. You have 4 tries before
+the terminal locks down to find the answer. After this happens you
+will have to restart (refresh the page).
+
+On the next page is a demo
+
+Press Help again to close
+
+Fallout Terminal Inspiration
+https://youtu.be/1iM12XyQPJE?t=60

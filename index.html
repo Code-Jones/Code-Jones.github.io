@@ -21,7 +21,7 @@
 
 
 <section>
-    <div id="click-to-start" onclick="start()"><p class="centered-2">click to start</p></div>
+    <div id="click-to-start" onclick="start()"><p class="centered-2" style="z-index: 1">click to start</p></div>
     <div class="flicker screen" id="screen">
         <div class="opening-text centered-2" id="opening">
             <p class="animated">SECURITY RESET...</p><br>
@@ -33,6 +33,10 @@
         </div>
     </div>
 </section>
+<div class="help centered-2" style="display: none" id="help">
+    <p id="helpContent"></p>
+    <button class="centered-h" type="button" onclick="getPage()" value="Page 1" id="pageButton"></button>
+</div>
 
 
 <!-- Footer -->
@@ -40,7 +44,7 @@
     <div class="icons">
         <a href="https://github.com/Code-Jones">GitHub</a>
         <a href="mailto:mdjones1793@gmail.com">Email</a>
-        <a href="#">Help</a>
+        <a onclick="openHelp()">Help</a>
         <a href="https://www.linkedin.com/in/matt-jones-developer/"> Matt Jones</a>
     </div>
 </footer>
