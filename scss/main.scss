@@ -7,17 +7,44 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
-  font-family: 'Share Tech Mono', monospace;
-  font-size: 1.8vw;
+  font-family: "Share Tech Mono", monospace;
+  font-size: $game-Font-Size;
 }
 
+@media only screen and (max-width: 700px) {
+  * {
+    font-size: 1.3vw;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .orientation {
+    display: block !important;
+  }
+}
+
+@media only screen and (orientation: landscape) {
+  .orientation {
+    display: none !important;
+  }
+}
+
+.orientation {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  position: fixed;
+  background: black;
+  color: greenyellow;
+  display: none;
+}
 
 header {
   animation: textShadow 6s infinite;
 }
 
 body {
-  background: url(../assets/images/greenscreen.png) no-repeat fixed center center;
+  background: url("../assets/images/greenscreen.png") no-repeat fixed center center;
   overflow: hidden;
   background-size: cover;
   height: 100%;
@@ -37,6 +64,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   animation: textShadow 6s infinite;
+
   a, a:visited {
     text-decoration: none;
     color: greenyellow;
@@ -102,7 +130,7 @@ footer {
 
 .opening-text {
   p {
-    border-right: 1.8vw solid green;
+    border-right: $game-Font-Size solid green;
     white-space: nowrap;
     overflow: hidden;
     width: 100%;
@@ -114,6 +142,7 @@ footer {
   width: 50%;
   margin-left: 2vw;
   margin-top: 2vw;
+
   p {
     white-space: nowrap;
     overflow: hidden;
@@ -127,27 +156,20 @@ footer {
   height: fit-content;
   display: grid;
   text-align: justify;
-  grid-template-columns: 0.5fr 2fr 0.1fr .5fr 2fr 1fr;
-  //grid-template-rows: 2.5vw;
+  grid-template-columns: 0.3fr 2.2fr 0.1fr .3fr 2.2fr 1fr;
+
   .gamePcBox {
     display: inline-flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 
 }
 
-.gameWord {
-
-}
-
-.gameDud {
-
-}
-
 .piece {
-  //overflow: visible;
   animation: textShadow 6s infinite;
   display: inline;
+
   span:hover {
     background-color: #9ffc0a;
     color: black;
@@ -167,9 +189,10 @@ footer {
   animation-fill-mode: forwards;
 }
 
-.attemptBox{
+.attemptBox {
   display: flex;
   opacity: 1;
+
   p:after {
     border-right: 1.8vw solid green;
     width: 1em;
@@ -199,6 +222,7 @@ footer {
   bottom: 0;
   left: 0;
 }
+
 .outputBox {
   min-width: 100%;
   height: 90%;
@@ -208,7 +232,7 @@ footer {
 
 .afterActive {
   p {
-    border-right: rgba(148,166,182,0);
+    border-right: rgba(148, 166, 182, 0);
   }
 }
 
@@ -225,10 +249,11 @@ footer {
   height: fit-content;
   width: fit-content;
   padding: .5em;
-  background: rgba(0,0,0, 1);
+  background: rgba(0, 0, 0, 1);
   box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.7);
   border-radius: .33em;
   z-index: 2;
+
   button {
     margin: .5em;
   }

@@ -1,7 +1,38 @@
+@font-face {
+  font-family: "techo";
+  src: url("/assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.ttf") format("truetype");
+  src: url("/assets/fonts/Share_Tech_Mono/ShareTechMono-Regular.woff") format("woff");
+}
 * {
   font-size: 2vh;
 }
 
+@media only screen and (orientation: portrait) {
+  .terminal {
+    max-height: 85%;
+  }
+}
+@media only screen and (orientation: landscape) {
+  * {
+    font-size: 2vw;
+  }
+
+  #terminal #commandLine {
+    min-height: 2vw;
+  }
+  #terminal #commandLine p {
+    min-height: 2vw;
+    font-size: 2vw;
+  }
+  #terminal #commandLine #prompt {
+    font-size: 2vw;
+    min-height: 2vw;
+  }
+  #terminal #commandLine input {
+    min-height: 2vw;
+    font-size: 2vw;
+  }
+}
 .bar {
   display: flex;
   background: rgba(0, 0, 0, 0.7);
@@ -31,7 +62,7 @@
 }
 
 .barBottom {
-  box-shadow: 0 -1em 0.5em 0.5em rgba(0, 0, 0, 0.7);
+  box-shadow: 0 -1em 0.3em 0.5em rgba(0, 0, 0, 0.5);
 }
 .barBottom div {
   border-bottom: #00ef58 solid 0.2em;
@@ -57,7 +88,7 @@
 .terminal {
   flex-direction: column;
   margin: 0.5em;
-  max-height: 90%;
+  max-height: 85%;
   overflow-y: scroll;
 }
 
@@ -65,14 +96,19 @@
   display: flex;
   flex-direction: column;
 }
+.output span {
+  animation: textShadow 6s infinite;
+}
 
 #commandLine {
   display: flex;
   width: 100%;
   min-height: 2vh;
+  animation: textShadow 6s infinite;
 }
 #commandLine p {
   font-size: 2vh;
+  animation: textShadow 6s infinite;
 }
 
 .input {
@@ -83,6 +119,7 @@
   width: 100%;
   overflow: auto;
   outline: none;
+  animation: textShadow 6s infinite;
 }
 .input #input:focus {
   outline-offset: 0;
@@ -95,8 +132,17 @@
 }
 
 .pipBoy {
-  opacity: 0.5;
-  min-width: 30%;
+  opacity: 0.2;
+  min-width: 50%;
+}
+
+.selector {
+  animation: textShadow 6s infinite;
+}
+
+.selector:hover {
+  background: #bff571;
+  color: #01eeab;
 }
 
 /*# sourceMappingURL=terminal.css.map */

@@ -16,8 +16,9 @@ const s7 = new Audio('./assets/sounds/key7.wav');
 const enter = new Audio('./assets/sounds/correct.wav');
 const clickSounds = [s1, s2, s3, s4, s5, s6, s7];
 
-input.focus();
+// input.focus();
 printHelp();
+// checkInput("open ClickMe.txt");
 
 fetch("./assets/json/directory.json").then(response => response.json()).then(data => {
     tree = data;
@@ -27,7 +28,7 @@ fetch("./assets/json/directory.json").then(response => response.json()).then(dat
 
 function openHelp() {
     let help = document.getElementsByClassName('help').item(0);
-    if (help.style.display === "none"){
+    if (help.style.display === "none") {
         getPage()
         help.style.display = "block";
     } else {
@@ -36,7 +37,7 @@ function openHelp() {
     }
 }
 
-function getPage(){
+function getPage() {
     let btn = document.getElementById('pageButton');
     if (btn.value === "Page 1") {
         fetch("./assets/readmes/TermHelpPage_1.txt").then(response => response.text()).then(text => document.getElementById('helpContent').innerText = text);
@@ -79,22 +80,41 @@ input.addEventListener("focusout", function () {
 });
 
 document.getElementById("screen").addEventListener("click", function () {
-   if (first) {
-       playBackgroundSounds();
-       first = false;
-   }
-   let help = document.getElementById('help');
-   if (help.style.display === "block") {
-       help.style.display = "none";
-   }
-    input.focus();
+    if (first) {
+        playBackgroundSounds()
+    }
+    first = false;
+})
+
+document.getElementById("screen").addEventListener("click", function () {
+    let help = document.getElementById('help');
+    if (help.style.display === "block") {
+        help.style.display = "none";
+    } else {
+        input.focus();
+    }
 });
 
 
-
 function checkInput(str) {
-    printToTerminal(defaultPrompt + currentDir.path + " " + str);
-    if (str !== "") {
+    if (str.name === "pastcmd") {
+        let pastCmd = str.innerText.split(".");
+        switch (pastCmd[1]) {
+            case "txt":
+            case "html":
+            case "exe":
+                checkInput("open " + str.innerText);
+                break;
+            case "":
+            case undefined:
+                checkInput("cd " + str.innerText);
+                break;
+            default:
+                checkInput(pastCmd[1]);
+                break;
+            }
+        } else if (str !== "") {
+        printToTerminal(defaultPrompt + currentDir.path + " " + str);
         let args = str.split(" ");
         switch (args[0].toLocaleLowerCase()) {
             case "cd":
@@ -133,47 +153,27 @@ function checkInput(str) {
     }
 }
 
-function printToTerminal(str) {
+function printToTerminal(str, cmd) {
     let line = document.createElement('span');
     line.innerText = str;
+    if (cmd) {
+        line.classList.add('selector');
+        line.name = "pastcmd";
+        line.addEventListener("click", function () {
+            checkInput(line);
+            enter.play();
+        });
+    }
     output.appendChild(line);
     document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
 }
 
 function printHelp() {
     fetch("./assets/readmes/TermHelpPage_1.txt").then(response => response.text()).then(text => printToTerminal(text));
-    // printToTerminal(
-    //     "Welcome to RoboTermLink terminal\n" +
-    //     "This terminal has been repurposed to demonstrate the admins ability for front end development\n" +
-    //     "Please use the list of commands below\n" +
-    //     "to navigate the directory and explore\n\n" +
-    //     "cd [path]: change directory ex: cd Projects\n" +
-    //     "ls: show directory\n" +
-    //     "clear: clears screen\n" +
-    //     "history: shows history of commands\n" +
-    //     "pwd: print working directory\n" +
-    //     "open [filename]: open file ex: open start_game.exe\n" +
-    //     "help: shows list of commands\n\n" +
-    //     "press the up and down arrows to retrieve the last commands\n\n" +
-    //     "For extra help with navigating directories please type 'help cd'\n"
-    // );
 }
 
 function printNavHelp() {
     fetch("./assets/readmes/TermHelpPage_2.txt").then(response => response.text()).then(text => printToTerminal(text));
-    // printToTerminal(
-    //     "Welcome to RoboTermLink terminal\n\n" +
-    //     "Navigation help\n\n" +
-    //     "To navigate directories please type the command cd followed by the directory you would like to access\n" +
-    //     "For example 'cd School_Stuff' / 'cd Fun_Side_Projects'\n" +
-    //     "To go the the parent directory (preceding directory) please type 'cd ..' as .. is the symbol for parent directory\n" +
-    //     "To go back to the home directory please type 'cd ~' as ~ is the symbol for the home directory\n" +
-    //     "When changing directories, the terminal is case sensitive and spelling has to be correct\n\n" +
-    //     "Display directory help\n\n" +
-    //     "To display the contents of the current directory please type ls\n" +
-    //     "This will show all the files and directory within the pwd (present working directory)\n" +
-    //     "Files without an extension such as .html or .txt are directories and can be opened\n"
-    // );
 }
 
 function changeDirectory(arg) {
@@ -189,10 +189,12 @@ function changeDirectory(arg) {
             break;
         case "~":
             currentDir = searchTree(tree, "C:");
+            showDirectory()
             changePrompt();
             break;
         default:
             currentDir = searchChildrenForDirectories(currentDir, arg);
+            showDirectory()
             changePrompt();
             break;
     }
@@ -231,10 +233,10 @@ function searchChildrenForFiles(currentDir, desired) {
 
 function showDirectory() {
     if (currentDir.name !== "C:") {
-        printToTerminal("..");
+        printToTerminal("..", true);
     }
     for (let children of currentDir.children) {
-        printToTerminal(children.name);
+        printToTerminal(children.name, true);
     }
 
 }
@@ -289,6 +291,7 @@ function goToParentDir() {
         let tempPath = currentDir.path.split("/");
         currentDir = searchTree(tree, tempPath[tempPath.length - 2])
         changePrompt();
+        showDirectory()
     }
 }
 
@@ -296,7 +299,7 @@ function changePrompt() {
     document.getElementById('prompt').innerText = currentDir.path;
 }
 
-function playBackgroundSounds() {
+async function playBackgroundSounds() {
     // This plays the background sounds
     let fan = new Audio("./assets/sounds/computer_fan.mp3");
     let hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
@@ -305,13 +308,13 @@ function playBackgroundSounds() {
         let hardDriveTime = sessionStorage.getItem("hardDriveTime");
         fan.currentTime = parseFloat(fanTime);
         hardDrive.currentTime = parseFloat(hardDriveTime);
-
     } catch (e) {
         console.log("Could not find sound times. Playing regardless");
     } finally {
+        first = false;
         fan.loop = true;
         hardDrive.loop = true;
-        fan.play();
-        hardDrive.play();
+        await fan.play();
+        await hardDrive.play();
     }
 }

@@ -23,20 +23,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/scss/libs/_fonts.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TO_DO" beforeDir="false" afterPath="$PROJECT_DIR$/TO_DO" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/readmes/HelpPage_1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/TermHelpPage_1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/readmes/HelpPage_2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/TermHelpPage_2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/readmes/Java_Class_Projects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/Java_Class_Projects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/readmes/ProjectDesc.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/ProjectDesc.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/json/directory.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/directory.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/readmes/ReadMe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/ReadMe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/readmes/Web_Class_Projects.txt" beforeDir="false" afterPath="$PROJECT_DIR$/assets/readmes/Web_Class_Projects.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/directory.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/terminal.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/terminal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/libs/_var.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/libs/_var.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/libs/fonts.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/libs/_fonts.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/libs/fonts.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/libs/_fonts.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/libs/fonts.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
@@ -62,6 +63,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="JupyterTrust" id="c215d19f-a0f3-4041-ada2-55447ae61871" />
   <component name="ProjectId" id="1jW5JMHToqpH4nfqX3Yn3z3DZWl" />
@@ -90,7 +99,8 @@
     <property name="nodejs.cucumber.cucumber_node_package_dir" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -99,18 +109,40 @@
       <recent name="C:\Work\Portfolio\assets\sounds" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\Fallout\Portfolio\assets\fonts\Share_Tech_Mono" />
       <recent name="D:\Projects\Fallout\Portfolio\assets\fonts\Share_Tech_Mono.zip" />
       <recent name="D:\Projects\Fallout\Portfolio\assets\images" />
       <recent name="D:\Projects\Fallout\Portfolio\assets\json" />
       <recent name="D:\Projects\Fallout\Portfolio" />
-      <recent name="C:\Work\Portfolio" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote" port="9229" restartOnDisconnect="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Portfolio/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration name="make_json" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Portfolio" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/make_json.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <recent_temporary>
@@ -168,7 +200,12 @@
       <workItem from="1609697672907" duration="14939000" />
       <workItem from="1609778249663" duration="42517000" />
       <workItem from="1609864249174" duration="10841000" />
-      <workItem from="1609891022615" duration="1456000" />
+      <workItem from="1609891022615" duration="6082000" />
+      <workItem from="1609942654233" duration="619000" />
+      <workItem from="1609951672394" duration="230000" />
+      <workItem from="1609951976829" duration="3251000" />
+      <workItem from="1609968697028" duration="674000" />
+      <workItem from="1610042075079" duration="10596000" />
     </task>
     <servers />
   </component>
@@ -187,23 +224,12 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/terminal.js</url>
-          <line>83</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Portfolio$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1609779015642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/pyserver_py$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1610046078497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

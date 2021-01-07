@@ -18,8 +18,5 @@ I also wanted this project to work on all screens regardless of size. I tried my
 make this as responsive as possible. I also wanted to add sounds since it adds another
 dimension to the game.
 
-
-vinilla js
-
 Fallout Terminal inspiration
 https://youtu.be/1iM12XyQPJE?t=60

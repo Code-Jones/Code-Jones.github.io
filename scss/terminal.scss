@@ -1,7 +1,41 @@
 @import "libs/var";
+@import "libs/fonts";
 
 * {
   font-size: $font-Size;
+}
+
+@media only screen and (orientation: portrait) {
+  .terminal {
+    max-height: 85%;
+  }
+
+}
+
+@media only screen and (orientation: landscape) {
+  * {
+    font-size: 2vw;
+  }
+  // idk why this is being so dumb but it needs all this to follow the same size
+  #terminal {
+    #commandLine {
+      min-height: 2vw;
+
+      p {
+        min-height: 2vw;
+        font-size: 2vw;
+      }
+
+      #prompt {
+        font-size: 2vw;
+        min-height: 2vw;
+      }
+      input {
+        min-height: 2vw;
+        font-size: 2vw;
+      }
+    }
+  }
 }
 
 //borders
@@ -30,6 +64,7 @@
 
 .topBar {
   box-shadow: 0 1em 0.5em 0.5em rgba(0, 0, 0, 0.7);
+
   div {
     border-top: $borderGreen solid $borderSize;
     margin-top: $externalMargin;
@@ -37,7 +72,8 @@
 }
 
 .barBottom {
-  box-shadow: 0 -1em 0.5em 0.5em rgba(0, 0, 0, 0.7);
+  box-shadow: 0 -1em 0.3em 0.5em rgba(0, 0, 0, 0.5);
+
   div {
     border-bottom: $borderGreen solid $borderSize;
     margin-bottom: $externalMargin;
@@ -64,26 +100,29 @@
 
 
 // terminal
-
 .terminal {
   flex-direction: column;
   margin: $externalMargin;
-  max-height: 90%;
+  max-height: 85%;
   overflow-y: scroll;
-
 }
 
 .output {
   display: flex;
   flex-direction: column;
+  span {
+    animation: textShadow 6s infinite;
+  }
 }
 
 #commandLine {
   display: flex;
   width: 100%;
   min-height: $font-Size;
+  animation: textShadow 6s infinite;
   p {
     font-size: $font-Size;
+    animation: textShadow 6s infinite;
   }
 
 }
@@ -96,6 +135,7 @@
   width: 100%;
   overflow: auto;
   outline: none;
+  animation: textShadow 6s infinite;
   #input:focus {
     outline-offset: 0;
   }
@@ -108,21 +148,14 @@
 }
 
 .pipBoy {
-  opacity: 0.5;
-  min-width: 30%;
+  opacity: 0.2;
+  min-width: 50%;
 }
-//
-//.help {
-//  position: fixed;
-//  text-align: center;
-//  height: fit-content;
-//  width: fit-content;
-//  padding: .5em;
-//  background: rgba(0,0,0, 1);
-//  box-shadow: 0.5em 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.7);
-//  border-radius: .33em;
-//  z-index: -1;
-//  button {
-//    margin: .5em;
-//  }
-//}
+
+.selector {
+  animation: textShadow 6s infinite;
+}
+.selector:hover {
+  background: #bff571;
+  color: #01eeab;
+}

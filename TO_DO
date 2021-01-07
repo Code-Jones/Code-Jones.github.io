@@ -1,14 +1,16 @@
 TODO Terminal
     {
     - fix responsive / terminal seems good
-    - animation
+    - cross browser support
     }
-    - change to json
+    - change to json ( dud removal different size)
+    - levels
     - test
     - clean code
     - check with aaron
     - update readmes
-     - add to json / clean github?
+    - add to json / clean github?
+    - fix load sound issue
     extra
     - mute button
     - add click sound to 2 page intro

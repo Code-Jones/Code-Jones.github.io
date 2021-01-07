@@ -4,10 +4,10 @@
   "type": "directory",
   "children": [
     {
-      "path": "C:/ReadMe.txt",
-      "name": "ReadMe.txt",
+      "path": "C:/ClickMe.txt",
+      "name": "ClickMe.txt",
       "type": "txt",
-      "local": "./assets/readmes/ReadMe.txt"
+      "local": "./assets/readmes/ClickMe.txt"
     },
     {
       "path": "C:/try_me.html",
@@ -23,7 +23,8 @@
         {
           "path": "C:/Projects/ProjectDesc.txt",
           "name": "ProjectDesc.txt",
-          "type": "txt"
+          "type": "txt",
+          "local": "./assets/readmes/ProjectDesc.txt"
         },
         {
           "path": "C:/Projects/School_Stuff",

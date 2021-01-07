@@ -12,8 +12,9 @@ let newIndex = null;
 newIndex = makeIndex(newIndex);
 let numLines = 17;
 let numPiecesAcross = 12;
+const words_6 = ["PLAYER", "ARMIES", "WASTES", "PIECES", "BECOME", "TOSSED", "MIDDLE", "KIDNAP", "KINDLY", "THWART", "SECRET", "HIDDEN", "OFFERS", "BEFORE", "FORGES", "FORCES", "NEEDED", "MINUTE", "LEARNS", "ATTACK", "PERIOD", "INSANE", "ACCESS", "AFRESH", "DESERT", "HUNGRY"]
 const words_10 = ["RECRUITING", "FLASHLIGHT", "BINOCULARS", "SUPPRESSOR", "DISPOSABLE", "CAMOUFLAGE", "TOOTHBRUSH", "INCENDIARY", "LIEUTENANT", "OCCUPATION", "ACTIVATING", "ENCOUNTERS", "STRETCHING", "FUTURISTIC", "APARTMENTS", "VEGETABLES", "RESTRICTED", "APOCALYPSE", "CONCERNING", "SCULPTURES", "CURRICULUM", "MECHANICAL", "THEREAFTER", "VANQUISHED", "DETERMINED", "FUNCTIONAL", "COMMISSION"];
-const duds = ["[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]", "[<>]"]
+const duds = ["[:^@]", "[}{]", "[<:)]", "[<>]", "[#.#]", "[%!`~]", "[*&$@*((@]", "[}[]", "[&#]", "[*##@)_]", "[:@;]", "[<:>]", "[><]", "[{}]", "[}{]", "[#:>]", "[*(@)]", "[)@:]", "[>{}<]", "[!@#]"]
 let taken = [];
 let takenCounter = 0;
 let keysBox_1;
@@ -92,7 +93,6 @@ function openGameScene() {
     for (let i = 0; i < animated.length; i++) {
         // animated[i].addEventListener('animationstart', playPrintSoundEvent);
         animated[i].addEventListener('animationend', () => {
-
             animated[i].classList.remove('active');
             animated[i].classList.add('afterActive');
             animated[i].style.opacity = '1';
@@ -118,13 +118,13 @@ function printGameBoard() {
     keysBox_1.classList.add('gamePcBox');
     let keysBox_2 = document.createElement('div');
     keysBox_2.classList.add('gamePcBox');
-    for (let i = 0; i < numLines * numPiecesAcross + 180; i++) {
+    for (let i = 0; i < 700; i++) {
         keysBox_1.appendChild(makeGameNodes());
         keysBox_2.appendChild(makeGameNodes());
     }
     let keysChildren = keysBox_1.childNodes;
     let keys_2Children = keysBox_2.childNodes;
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 7; i++) {
         replaceWithFiller(keysChildren, "word");
         replaceWithFiller(keysChildren, "dud");
         replaceWithFiller(keys_2Children, "word");
