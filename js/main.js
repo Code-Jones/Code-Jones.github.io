@@ -387,8 +387,8 @@ function makeIndex(line) {
 
 function playBackgroundSounds() {
     // This plays the background sounds that play throughout the game.
-    fan = new Audio("./assets/sounds/computer_fan.mp3");
-    hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
+    fan = new Audio("./assets/sounds/computer_fan.wav");
+    hardDrive = new Audio("./assets/sounds/ibm_hard_drive.wav");
     fan.loop = true;
     fan.play();
     hardDrive.loop = true;

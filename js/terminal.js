@@ -301,8 +301,8 @@ function changePrompt() {
 
 async function playBackgroundSounds() {
     // This plays the background sounds
-    let fan = new Audio("./assets/sounds/computer_fan.mp3");
-    let hardDrive = new Audio("./assets/sounds/ibm_hard_drive.mp3");
+    let fan = new Audio("./assets/sounds/computer_fan.wav");
+    let hardDrive = new Audio("./assets/sounds/ibm_hard_drive.wav");
     try {
         let fanTime = sessionStorage.getItem("fanTime");
         let hardDriveTime = sessionStorage.getItem("hardDriveTime");
