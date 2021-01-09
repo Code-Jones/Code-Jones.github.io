@@ -40,6 +40,7 @@
 }
 
 header {
+  -webkit-animation: textShadow 6s infinite;
   animation: textShadow 6s infinite;
 }
 
@@ -104,6 +105,8 @@ footer {
   height: 100%;
   z-index: -1;
   background-size: 200% 200%;
+  -webkit-animation: waves 20s linear infinite;
+  -webkit-animation-direction: reverse;
   animation: waves 20s linear infinite;
   animation-direction: reverse;
 }
@@ -125,6 +128,7 @@ footer {
   z-index: -1;
   background-size: 100% 2px, 3px 100%;
   pointer-events: none;
+  -webkit-animation: flicker 2s infinite;;
   animation: flicker 2s infinite;
 }
 
@@ -167,6 +171,7 @@ footer {
 }
 
 .piece {
+  -webkit-animation: textShadow 6s infinite;
   animation: textShadow 6s infinite;
   display: inline;
 

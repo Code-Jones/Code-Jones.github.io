@@ -27,6 +27,12 @@
           "local": "./assets/readmes/ProjectDesc.txt"
         },
         {
+          "path": "C:/Projects/spam-your-friends-with-python.html",
+          "name": "spam-your-friends-with-python.html",
+          "type": "html",
+          "url": "https://github.com/Code-Jones/spam-your-friends-with-python"
+        },
+        {
           "path": "C:/Projects/School_Stuff",
           "name": "School_Stuff",
           "type": "directory",
@@ -39,7 +45,20 @@
                 {
                   "path": "C:/Projects/School_Stuff/Web/Web_Class_Projects.txt",
                   "name": "Web_Class_Projects.txt",
-                  "type": "txt"
+                  "type": "txt",
+                  "local": "./assets/readmes/Web_Class_Projects.txt"
+                },
+                {
+                  "path": "C:/Projects/School_Stuff/Web/FrontEnd.html",
+                  "name": "FrontEnd.html",
+                  "type": "html",
+                  "url": "https://github.com/Code-Jones/Web_Front_End"
+                },
+                {
+                  "path": "C:/Projects/School_Stuff/Web/BackEnd.html",
+                  "name": "BackEnd.html",
+                  "type": "html",
+                  "url": "https://github.com/Code-Jones/Web_Back_End"
                 }
               ]
             },
@@ -51,17 +70,19 @@
                 {
                   "path": "C:/Projects/School_Stuff/Java/Java_Class_Projects.txt",
                   "name": "Java_Class_Projects.txt",
-                  "type": "txt"
-                }
+                  "type": "txt",
+                  "local": "./assets/readmes/Java_Class_Projects.txt"
+                },
+                {
+                  "path": "C:/Projects/School_Stuff/Java/Java_School.html",
+                  "name": "Java_School.html",
+                  "type": "html",
+                  "url": "https://github.com/Code-Jones/Java_School"
+                },
+
               ]
             }
           ]
-        },
-        {
-          "path": "C:/Projects/Fun_Side_Projects",
-          "name": "Fun_Side_Projects",
-          "type": "directory",
-          "children": []
         }
       ]
     },
