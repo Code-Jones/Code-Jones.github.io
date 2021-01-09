@@ -34,16 +34,29 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     orn.style.display = 'block';
 }
 
-if (IsSafari) {
-    alert("Safari Hates this site. Please use Chrome")
-}
+function checkBrowser() {
 
-function IsSafari() {
-    let ua = navigator.userAgent.toLowerCase();
-    if (ua.indexOf('safari') !== -1) {
-        return ua.indexOf('chrome') <= -1;
+    let userAgentString =
+        navigator.userAgent;
+    let chromeAgent =
+        userAgentString.indexOf("Chrome") > -1;
+    let IExplorerAgent =
+        userAgentString.indexOf("MSIE") > -1 ||
+        userAgentString.indexOf("rv:") > -1;
+    let firefoxAgent =
+        userAgentString.indexOf("Firefox") > -1;
+    let safariAgent =
+        userAgentString.indexOf("Safari") > -1;
+    if ((chromeAgent) && (safariAgent))
+        safariAgent = false;
+    let operaAgent =
+        userAgentString.indexOf("OP") > -1;
+    if ((chromeAgent) && (operaAgent))
+        chromeAgent = false;
+
+    if (safariAgent) {
+        alert("Safari Hates this site. Please use Chrome")
     }
-
 }
 
 function start() {
