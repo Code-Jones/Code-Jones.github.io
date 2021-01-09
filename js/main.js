@@ -28,6 +28,12 @@ let passwordLetters; // really shouldn't be a global variable
 let fan;
 let hardDrive;
 
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    let orn = document.getElementById('orientation')
+    orn.classList.add('orientation');
+    orn.style.display = 'block';
+}
+
 function start() {
     document.getElementById('click-to-start').remove();
     animated = document.querySelectorAll('.animated');
@@ -51,7 +57,6 @@ function start() {
             openGameScene();
         }, 3000);
     });
-
 }
 
 function makeAttemptBoxes() {
