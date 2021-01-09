@@ -34,6 +34,11 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     orn.style.display = 'block';
 }
 
+if (navigator.userAgent.indexOf("Safari") !== -1) {
+    alert("Safari Hates this site. Please use Chrome")
+}
+
+
 function start() {
     document.getElementById('click-to-start').remove();
     animated = document.querySelectorAll('.animated');
