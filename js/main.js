@@ -34,10 +34,14 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
     orn.style.display = 'block';
 }
 
-if (navigator.userAgent.indexOf("Safari") !== -1) {
+if (IsSafari) {
     alert("Safari Hates this site. Please use Chrome")
 }
 
+function IsSafari() {
+    return navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+
+}
 
 function start() {
     document.getElementById('click-to-start').remove();
