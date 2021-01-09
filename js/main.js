@@ -39,7 +39,10 @@ if (IsSafari) {
 }
 
 function IsSafari() {
-    return navigator.userAgent.toLowerCase().indexOf('safari/') > -1;
+    let ua = navigator.userAgent.toLowerCase();
+    if (ua.indexOf('safari') !== -1) {
+        return ua.indexOf('chrome') <= -1;
+    }
 
 }
 
