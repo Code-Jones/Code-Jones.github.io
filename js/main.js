@@ -28,36 +28,15 @@ let passwordLetters; // really shouldn't be a global variable
 let fan;
 let hardDrive;
 
+checkBrowser()
+
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
     let orn = document.getElementById('orientation')
     orn.classList.add('orientation');
     orn.style.display = 'block';
 }
 
-function checkBrowser() {
 
-    let userAgentString =
-        navigator.userAgent;
-    let chromeAgent =
-        userAgentString.indexOf("Chrome") > -1;
-    let IExplorerAgent =
-        userAgentString.indexOf("MSIE") > -1 ||
-        userAgentString.indexOf("rv:") > -1;
-    let firefoxAgent =
-        userAgentString.indexOf("Firefox") > -1;
-    let safariAgent =
-        userAgentString.indexOf("Safari") > -1;
-    if ((chromeAgent) && (safariAgent))
-        safariAgent = false;
-    let operaAgent =
-        userAgentString.indexOf("OP") > -1;
-    if ((chromeAgent) && (operaAgent))
-        chromeAgent = false;
-
-    if (safariAgent) {
-        alert("Safari Hates this site. Please use Chrome")
-    }
-}
 
 function start() {
     document.getElementById('click-to-start').remove();
@@ -473,4 +452,29 @@ function getPage(){
         btn.innerText = "Page 2"
     }
 
+}
+
+function checkBrowser() {
+
+    let userAgentString =
+        navigator.userAgent;
+    let chromeAgent =
+        userAgentString.indexOf("Chrome") > -1;
+    let IExplorerAgent =
+        userAgentString.indexOf("MSIE") > -1 ||
+        userAgentString.indexOf("rv:") > -1;
+    let firefoxAgent =
+        userAgentString.indexOf("Firefox") > -1;
+    let safariAgent =
+        userAgentString.indexOf("Safari") > -1;
+    if ((chromeAgent) && (safariAgent))
+        safariAgent = false;
+    let operaAgent =
+        userAgentString.indexOf("OP") > -1;
+    if ((chromeAgent) && (operaAgent))
+        chromeAgent = false;
+
+    if (safariAgent) {
+        alert("Safari Hates this site. Please use Chrome")
+    }
 }
