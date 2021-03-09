@@ -315,7 +315,7 @@ footer a:hover {
   height: fit-content;
   display: grid;
   text-align: justify;
-  grid-template-columns: 0.3fr 2.2fr 0.1fr 0.3fr 2.2fr 1fr;
+  grid-template-columns: 0.3fr 2.2fr 0.1fr 0.3fr 2.2fr 0.75fr;
 }
 .gameScreen .gamePcBox {
   display: inline-flex;
@@ -363,7 +363,7 @@ footer a:hover {
 }
 
 .sideTermBox {
-  margin: 0;
+  margin: 1em;
   position: relative;
 }
 .sideTermBox div {

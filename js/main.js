@@ -37,7 +37,6 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 
-
 function start() {
     document.getElementById('click-to-start').remove();
     animated = document.querySelectorAll('.animated');
@@ -475,6 +474,6 @@ function checkBrowser() {
         chromeAgent = false;
 
     if (safariAgent) {
-        alert("Safari Hates this site. Please use Chrome")
+        alert("I've noticed issues with using safari I haven't been able to fix yet. Please use Chrome for the best experience")
     }
 }
