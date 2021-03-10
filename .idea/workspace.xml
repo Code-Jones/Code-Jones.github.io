@@ -24,16 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="376c97bb-a12e-43fd-a583-a8db4e54ee52" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TO_DO" beforeDir="false" afterPath="$PROJECT_DIR$/TO_DO" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Terminal.html" beforeDir="false" afterPath="$PROJECT_DIR$/Terminal.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/json/directory.json" beforeDir="false" afterPath="$PROJECT_DIR$/assets/json/directory.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/libs/_animations.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/libs/_animations.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scss/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/main.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scss/terminal.css" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/terminal.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scss/terminal.scss" beforeDir="false" afterPath="$PROJECT_DIR$/scss/terminal.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -200,6 +194,7 @@
       <workItem from="1610140641191" duration="1426000" />
       <workItem from="1610214398286" duration="2527000" />
       <workItem from="1615271123359" duration="3851000" />
+      <workItem from="1615416723164" duration="2015000" />
     </task>
     <servers />
   </component>
@@ -223,7 +218,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/pyserver_py$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1610046078497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/Portfolio$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1609779015642" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/pyserver_py$index_html.dat" NAME="index.html Coverage Results" MODIFIED="1610046078497" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="WipCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
